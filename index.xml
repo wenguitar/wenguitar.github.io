@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>陳文學醫師</title>
+    <link>https://wenguitar.github.io/</link>
+    <description>Recent content on 陳文學醫師</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-tw</language>
+    <lastBuildDate>Wed, 19 Apr 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://wenguitar.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title> Wen的第一篇文章 </title>
+      <link>https://wenguitar.github.io/test/</link>
+      <pubDate>Wed, 19 Apr 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://wenguitar.github.io/test/</guid>
+      <description>Hello workd 我是Wen 一級標題 二級標題 三級標題 今天風很大 超級大的 吃飯 睡覺 爬山 爬玉山 爬雪山 看電影 失敗為成功之母 不吃不可 回到原點 var = code</description>
+    </item>
+    
+    <item>
+      <title>Clean White Theme for Hugo</title>
+      <link>https://wenguitar.github.io/post/readme/</link>
+      <pubDate>Wed, 09 Jan 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://wenguitar.github.io/post/readme/</guid>
+      <description>Clean White Theme for Hugo CleanWhite is a clean, elegant, but fully functional blog theme for Hugo. Here is a live demo site using this theme. It is based on huxblog Jekyll Theme and Clean Blog Jekyll Theme. These two upstream projects have done awesome jobs to create a blog theme, what I&amp;rsquo;m doing here is porting it to Hugo, of which I like the simplicity and the much faster</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://wenguitar.github.io/about/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://wenguitar.github.io/about/</guid>
+      <description>About Me Hi, I am Wen-Hsuheh,Chen , a family medicine physician. My expertise is in chronic disease management and home-based medical care. I am skilled at listening to patients&amp;rsquo; needs and discussing how they can improve their lifestyle habits because many chronic diseases stem from poor lifestyle habits. While medication is the simplest and most direct way to treat chronic diseases, I encourage patients to make adjustments in their daily lives so that they can gradually reduce their medication dosage and regain a healthy life.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://wenguitar.github.io/health-care/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://wenguitar.github.io/health-care/</guid>
+      <description>這篇是留給慢性病照護的 門診時段／Outpatient Clinic Hours 目前門診在主要在嘉義長庚星期一下午和星期三上午， 鹿草衛生所和東石衛生所為駐診服務 目前</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://wenguitar.github.io/home-care/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://wenguitar.github.io/home-care/</guid>
+      <description>這篇是留給居家醫療的 門診時段／Outpatient Clinic Hours 目前門診在主要在嘉義長庚星期一下午和星期三上午， 鹿草衛生所和東石衛生所為駐診服務 目前星</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://wenguitar.github.io/notes/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://wenguitar.github.io/notes/</guid>
+      <description>門診時段／Outpatient Clinic Hours 目前門診在主要在嘉義長庚星期一下午和星期三上午， 鹿草衛生所和東石衛生所為駐診服務 目前星期三上午人數較多，可</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://wenguitar.github.io/search/placeholder/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://wenguitar.github.io/search/placeholder/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>陳文學醫師手札</title>
+      <link>https://wenguitar.github.io/archive/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://wenguitar.github.io/archive/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
