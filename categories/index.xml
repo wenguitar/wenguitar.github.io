@@ -2,26 +2,26 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Categories on 陳文學醫師</title>
-    <link>https://wenguitar.github.io/categories/</link>
+    <link>https://fm-chen.tw/categories/</link>
     <description>Recent content in Categories on 陳文學醫師</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-tw</language>
-    <lastBuildDate>Sun, 16 Apr 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://wenguitar.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 16 Apr 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://fm-chen.tw/categories/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>學習進修</title>
-      <link>https://wenguitar.github.io/categories/%E5%AD%B8%E7%BF%92%E9%80%B2%E4%BF%AE/</link>
+      <link>https://fm-chen.tw/categories/%E5%AD%B8%E7%BF%92%E9%80%B2%E4%BF%AE/</link>
       <pubDate>Sun, 16 Apr 2023 00:00:00 +0000</pubDate>
       
-      <guid>https://wenguitar.github.io/categories/%E5%AD%B8%E7%BF%92%E9%80%B2%E4%BF%AE/</guid>
+      <guid>https://fm-chen.tw/categories/%E5%AD%B8%E7%BF%92%E9%80%B2%E4%BF%AE/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Tech</title>
-      <link>https://wenguitar.github.io/categories/tech/</link>
+      <link>https://fm-chen.tw/categories/tech/</link>
       <pubDate>Sun, 01 Jan 2023 00:00:00 +0000</pubDate>
       
-      <guid>https://wenguitar.github.io/categories/tech/</guid>
+      <guid>https://fm-chen.tw/categories/tech/</guid>
       <description></description>
     </item>
     
