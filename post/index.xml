@@ -6,11 +6,29 @@
     <description>Recent content in Posts on 陳文學醫師</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-tw</language>
-    <lastBuildDate>Wed, 19 Apr 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://wenguitar.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 16 Apr 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://wenguitar.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>  初探機器學習 </title>
+      <link>https://wenguitar.github.io/post/2023cgmh/</link>
+      <pubDate>Sun, 16 Apr 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://wenguitar.github.io/post/2023cgmh/</guid>
+      <description>上個週末六日到林口長庚參加了長庚家醫科跨院區的學術研討會，這是一個從2018年開始就有的一年一度研討會，不過因為COVID疫情的關係，中斷了</description>
+    </item>
+    
+    <item>
+      <title>  從蘇格拉底到專業素養 </title>
+      <link>https://wenguitar.github.io/post/pgyteacher/</link>
+      <pubDate>Sat, 08 Apr 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://wenguitar.github.io/post/pgyteacher/</guid>
+      <description>這個週六到高榮參加7小時的PGY教師訓練課程，身為在醫院的主治醫師，多少會遇到需要教學的場合，不論是帶科內的住院醫師或是輪訓的PGY學員。 大</description>
+    </item>
+    
     <item>
       <title> Wen的第一篇文章 </title>
       <link>https://wenguitar.github.io/test/</link>
-      <pubDate>Wed, 19 Apr 2023 00:00:00 +0000</pubDate>
+      <pubDate>Sun, 01 Jan 2023 00:00:00 +0000</pubDate>
       
       <guid>https://wenguitar.github.io/test/</guid>
       <description>Hello workd 我是Wen 一級標題 二級標題 三級標題 今天風很大 超級大的 吃飯 睡覺 爬山 爬玉山 爬雪山 看電影 失敗為成功之母 不吃不可 回到原點 var = code</description>
