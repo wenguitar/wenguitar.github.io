@@ -513,9 +513,9 @@ pre code{
     }
 }
 .post-content-preview{
-    font-size:13px;
-    font-style:italic;
-    color:#a3a3a3
+    font-size:16px;
+    
+    color:#616161
 }
 .post-content-preview:hover{
     color:#0085a1
