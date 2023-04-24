@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>AI on 陳文學醫師</title>
+    <link>https://fm-chen.tw/tags/ai/</link>
+    <description>Recent content in AI on 陳文學醫師</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-tw</language>
+    <lastBuildDate>Wed, 08 Mar 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://fm-chen.tw/tags/ai/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>  從「會用網路的醫師」到「會用AI的醫師」 </title>
+      <link>https://fm-chen.tw/post/2023-03-08-chatgpt/</link>
+      <pubDate>Wed, 08 Mar 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://fm-chen.tw/post/2023-03-08-chatgpt/</guid>
+      <description>最近ChatGPT可以說是非常的火紅，要不是棒球經典賽開打，稍稍轉移大家的注意力，媒體應該會持續報導AI，持續讓大家感到AI焦慮 ChatGP</description>
+    </item>
+    
+  </channel>
+</rss>
