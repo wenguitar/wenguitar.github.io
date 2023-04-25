@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    
+    <meta property="og:site_name" content="陳文學醫師">
+    <meta property="og:type" content="article">
+
+    
+    <meta property="og:image" content="https://miro.medium.com/v2/resize:fit:1400/format:webp/1*IdGvsE6Pvkosz0Chzw9qog.jpeg">
+    <meta property="twitter:image" content="https://miro.medium.com/v2/resize:fit:1400/format:webp/1*IdGvsE6Pvkosz0Chzw9qog.jpeg" />
+    
+
+    
+    <meta name="title" content="  從「會用網路的醫師」到「會用AI的醫師」 " />
+    <meta property="og:title" content="  從「會用網路的醫師」到「會用AI的醫師」 " />
+    <meta property="twitter:title" content="  從「會用網路的醫師」到「會用AI的醫師」 " />
+    
+
+    
+    <meta name="description" content="ChatGPT是在2022年的11月30日公開發佈的，我大概在2022年12月初的時候就接觸到了，玩了一下，發現真的很厲害，但卻不太清楚要怎麼樣運用Chat GPT來跟工作結合。">
+    <meta property="og:description" content="ChatGPT是在2022年的11月30日公開發佈的，我大概在2022年12月初的時候就接觸到了，玩了一下，發現真的很厲害，但卻不太清楚要怎麼樣運用Chat GPT來跟工作結合。" />
+    <meta property="twitter:description" content="ChatGPT是在2022年的11月30日公開發佈的，我大概在2022年12月初的時候就接觸到了，玩了一下，發現真的很厲害，但卻不太清楚要怎麼樣運用Chat GPT來跟工作結合。" />
+    
+
+    
+    <meta property="twitter:card" content="summary" />
+    
+    
+
+    <meta name="keyword"  content="陳文學, 陳文學醫師, 健康管理, 慢性病, 居家醫療, 在宅醫療,嘉義 家醫科, 家醫科, 家庭醫學, 高血壓, 糖尿病, 高血脂, 健康檢查, 嘉義">
+    <link rel="shortcut icon" href="/img/favicon.ico">
+    <link rel="icon" href="/img/favicon.ico">
+
+    <title>  從「會用網路的醫師」到「會用AI的醫師」  | 家醫科 陳文學醫師 (Wen-Hsueh Chen, MD)</title>
+
+    <link rel="canonical" href="/post/chatgpt/">
+
+    
+    
+    
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+
+    
+    <link rel="stylesheet" href="/css/hugo-theme-cleanwhite.min.css">
+
+    
+    <link rel="stylesheet" href="/css/zanshang.css">
+
+    
+    <link href="https://cdn.jsdelivr.net/gh/FortAwesome/Font-Awesome@5.15.1/css/all.css" rel="stylesheet" type="text/css">
+
+    
+    
+
+    
+    <script src="/js/jquery.min.js"></script>
+
+    
+    <script src="/js/bootstrap.min.js"></script>
+
+    
+    <script src="/js/hux-blog.min.js"></script>
+
+    
+    <script src="/js/lazysizes.min.js"></script>
+
+    
+    
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-1RFPFJN9ZG"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-1RFPFJN9ZG');
+</script>
+
+
+</head>
+
+
+
+
+
+
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+
+    <div class="container-fluid">
+        
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">陳文學醫師</a>
+        </div>
+
+        
+        
+        <div id="huxblog_navbar">
+            <div class="navbar-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    
+                
+                    <li>
+                        <a href="/">最新文章</a>
+                    </li> 
+                    <li>
+                        <a href="/about">醫師介紹</a>
+                    </li> 
+
+                    
+                    <li>
+                        <a href="/health-care">健康管理</a>
+		           </li>
+                    <li>
+                        <a href="/home-care">居家醫療</a>
+		           </li>
+                    <li>
+                        <a href="/archive">醫師手札</a>
+		           </li>
+                   <li>
+                        <a href="/notes">門診時間</a>
+                    </li>
+		            <li>
+                        <a href="/search"><i class="fa fa-search"></i></a>
+		           </li>
+                </ul>
+            </div>
+        </div>
+        
+    </div>
+    
+</nav>
+<script>
+    
+    
+    
+    var $body   = document.body;
+    var $toggle = document.querySelector('.navbar-toggle');
+    var $navbar = document.querySelector('#huxblog_navbar');
+    var $collapse = document.querySelector('.navbar-collapse');
+
+    $toggle.addEventListener('click', handleMagic)
+    function handleMagic(e){
+        if ($navbar.className.indexOf('in') > 0) {
+        
+            $navbar.className = " ";
+            
+            setTimeout(function(){
+                
+                if($navbar.className.indexOf('in') < 0) {
+                    $collapse.style.height = "0px"
+                }
+            },400)
+        }else{
+        
+            $collapse.style.height = "auto"
+            $navbar.className += " in";
+        }
+    }
+</script>
+
+
+
+
+<style type="text/css">
+    header.intro-header {
+        background-image: url('https://miro.medium.com/v2/resize:fit:1400/format:webp/1*IdGvsE6Pvkosz0Chzw9qog.jpeg')
+    }
+</style>
+
+<header class="intro-header" >
+
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <div class="tags">
+                        
+                        <a class="tag" href="/tags/ai" title="AI">
+                            AI
+                        </a>
+                        
+                        <a class="tag" href="/tags/%E9%86%AB%E5%AD%B8%E6%95%99%E8%82%B2" title="醫學教育">
+                            醫學教育
+                        </a>
+                        
+                    </div>
+                    <h1>  從「會用網路的醫師」到「會用AI的醫師」 </h1>
+                    <h2 class="subheading"> ChatGPT初體驗 </h2>
+                    <span class="meta">
+                        
+                            作者 /   
+                            
+                                陳文學醫師
+                             
+                            &nbsp; on  
+                             March 8, 2023
+                            
+                            
+                            
+                            
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+
+
+
+<article>
+    <div class="container">
+        <div class="row">
+
+            
+            <div class="
+                col-lg-8 col-lg-offset-2
+                col-md-10 col-md-offset-1
+                post-container">
+
+                
+                <p>最近ChatGPT可以說是非常的火紅，要不是棒球經典賽開打，稍稍轉移大家的注意力，媒體應該會持續報導AI，持續讓大家感到AI焦慮</p>
+<p>ChatGPT是在2022年的11月30日公開發佈的，我大概在2022年12月初的時候就接觸到了，玩了一下，發現真的很厲害，但卻不太清楚要怎麼樣運用Chat GPT來跟工作結合。</p>
+<hr>
+<p>一直到今年2月多，我發現越來越多人把ChatGPT當工具使用，才試著轉變觀念，仔細去想一下工作中有哪些流程是可以透過ChatGPT來優化的。</p>
+<p>首先我抓出了一兩個工作中不太方便的地方，一個是居家病歷，一個是臨場服務紀錄，其實兩個都是在文書作業上很花時間。</p>
+<p>我想到的解決方式，就是請ChatGPT幫我寫一個簡單的程式，讓我可以快速完成這些繁瑣且機械性的事情：</p>
+<p>
+  <img src="https://miro.medium.com/v2/resize:fit:1400/format:webp/1*_-wyb4PDN0eqC29t-e7YzQ.jpeg" alt="">
+
+</p>
+<p>最後很成功的做出我想要的程式</p>
+<hr>
+<h2 id="啟發住院醫師">啟發住院醫師</h2>
+<p>後來我發現這個能力實在是太重要了，就算這樣的簡單程式只有提升一個人的工作效率10%好了，科內只要有五個醫師學會寫程式改進流程，效率就是提升50%，整整多了半個人的戰鬥力！</p>
+<p>所以我很快就在科內安排一場教學，跟住院醫師分享如何用ChatGPT寫程式來改善工作效率</p>
+<p>
+  <img src="https://miro.medium.com/v2/resize:fit:1400/format:webp/1*ZjqtVfS5RODHNu-PZmMkig.png" alt="">
+
+</p>
+<p>結果效果出奇地好，本來會有點擔心大家沒有Coding基礎，會不會完全無法理解，沒想到中午上完課，下午就有學弟把他想要的程式給寫出來了！</p>
+<p>以下是學弟的心得：</p>
+<p>
+  <img src="https://miro.medium.com/v2/resize:fit:1400/format:webp/1*fModWcVUV1PbfSL56-XlHQ.png" alt="">
+
+</p>
+<hr>
+<h2 id="未來">未來</h2>
+<p>其實在AI出現之前，就已經是「會用網路的醫師」逐漸取代「不會用網路的醫師」了</p>
+<p>老實說未來AI會不會取代醫師，真的不知道，但就算會取代，我想在取代前也會有一段時間是「會用AI的醫師」取代「不會用AI的醫師」</p>
+<p>不過我也相信在AI輔助臨床工作的時間會是非常美好的，因為醫師終於能簡化煩瑣的文書業務，多花點心力「看病人」、「和病人溝通」和專研醫學知識了！</p>
+
+
+                
+
+                
+                <hr>
+                <ul class="pager">
+                    
+                    <li class="previous">
+                        <a href="/post/alishan/" data-toggle="tooltip" data-placement="top" title="  阿里山香林衛生室-駐診初體驗 ">&larr;
+                            Previous Post</a>
+                    </li>
+                    
+                    
+                    <li class="next">
+                        <a href="/post/2023-03-28-ergolecture/" data-toggle="tooltip" data-placement="top" title="  久違的大堂講座：職場常見骨骼肌肉危害及預防 ">Next
+                            Post &rarr;</a>
+                    </li>
+                    
+                </ul>
+                
+
+                
+
+
+
+            </div>
+
+            
+            
+            <div class="
+                col-lg-2 col-lg-offset-0
+                visible-lg-block
+                sidebar-container
+                catalog-container">
+                <div class="side-catalog">
+                    <hr class="hidden-sm hidden-xs">
+                    <h5>
+                        <a class="catalog-toggle" href="#">文章目錄</a>
+                    </h5>
+                    <ul class="catalog-body"></ul>
+                </div>
+            </div>
+            
+
+            
+            <div class="
+                col-lg-8 col-lg-offset-2
+                col-md-10 col-md-offset-1
+                sidebar-container">
+
+                
+                
+                <section>
+                    <hr class="hidden-sm hidden-xs">
+                    <h5><a href="/tags/">FEATURED TAGS</a></h5>
+                    <div class="tags">
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        <a href="/tags/%E5%AE%B6%E9%86%AB%E7%A7%91" title="家醫科">
+                            家醫科
+                        </a>
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        <a href="/tags/%E9%86%AB%E5%AD%B8%E6%95%99%E8%82%B2" title="醫學教育">
+                            醫學教育
+                        </a>
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                    </div>
+                </section>
+                
+
+                
+                
+                <section>
+                    <hr>
+                    <h5>FRIENDS</h5>
+                    <ul class="list-inline">
+                        
+                        <li><a target="_blank" href="https://medium.com/%e5%87%bd%e5%bc%8f%e7%87%9f%e9%a4%8a">函式營養</a></li>
+                        
+                    </ul>
+                </section>
+                
+            </div>
+        </div>
+    </div>
+</article>
+
+
+
+
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">                  
+                    
+                    <li>
+                        <a href="mailto:dr8732@cgmh.org.tw">
+                            <span class="fa-stack fa-lg">
+                                <i class="fas fa-circle fa-stack-2x"></i>
+                                <i class="fas fa-envelope fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+		           
+                    
+                    
+                    
+                    
+
+		            
+                    
+                    
+                    
+                    
+                    
+                    
+                    <li>
+                        <a target="_blank" href="https://medium.com/%e9%99%b3%e6%96%87%e5%ad%b8%e9%86%ab%e5%b8%ab">
+                            <span class="fa-stack fa-lg">
+                                <i class="fas fa-circle fa-stack-2x"></i>
+                                <i class="fab fa-medium fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    
+                    
+                    
+                    
+            
+            
+            
+           
+                   <li>
+                       <a href='' rel="alternate" type="application/rss+xml" title="陳文學醫師" >
+                           <span class="fa-stack fa-lg">
+                               <i class="fas fa-circle fa-stack-2x"></i>
+                               <i class="fas fa-rss fa-stack-1x fa-inverse"></i>
+                           </span>
+                       </a>
+                   </li>
+            
+             </ul>
+		<p class="copyright text-muted">
+                    Copyright &copy; 陳文學醫師 2023
+                    <br>
+                    <a href="https://themes.gohugo.io/hugo-theme-cleanwhite">CleanWhite Hugo Theme</a> by <a href="https://zhaohuabing.com">Huabing</a> |
+                    <iframe
+                        style="margin-left: 2px; margin-bottom:-5px;"
+                        frameborder="0" scrolling="0" width="100px" height="20px"
+                        src="https://ghbtns.com/github-btn.html?user=zhaohuabing&repo=hugo-theme-cleanwhite&type=star&count=true" >
+                    </iframe>
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+
+
+<script>
+    function loadAsync(u, c) {
+      var d = document, t = 'script',
+          o = d.createElement(t),
+          s = d.getElementsByTagName(t)[0];
+      o.src = u;
+      if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+      s.parentNode.insertBefore(o, s);
+    }
+</script>
+
+
+
+
+
+
+<script>
+    
+    if($('#tag_cloud').length !== 0){
+        loadAsync("/js/jquery.tagcloud.js",function(){
+            $.fn.tagcloud.defaults = {
+                
+                color: {start: '#bbbbee', end: '#0085a1'},
+            };
+            $('#tag_cloud a').tagcloud();
+        })
+    }
+</script>
+
+
+<script>
+    loadAsync("https://cdn.jsdelivr.net/npm/fastclick@1.0.6/lib/fastclick.min.js", function(){
+        var $nav = document.querySelector("nav");
+        if($nav) FastClick.attach($nav);
+    })
+</script>
+
+
+
+
+
+
+<script type="text/javascript">
+    function generateCatalog(selector) {
+
+        
+        
+        
+        
+            _containerSelector = 'div.post-container'
+        
+
+        
+        var P = $(_containerSelector), a, n, t, l, i, c;
+        a = P.find('h1,h2,h3,h4,h5,h6');
+
+        
+        $(selector).html('')
+
+        
+        a.each(function () {
+            n = $(this).prop('tagName').toLowerCase();
+            i = "#" + $(this).prop('id');
+            t = $(this).text();
+            c = $('<a href="' + i + '" rel="nofollow">' + t + '</a>');
+            l = $('<li class="' + n + '_nav"></li>').append(c);
+            $(selector).append(l);
+        });
+        return true;
+    }
+
+    generateCatalog(".catalog-body");
+
+    
+    $(".catalog-toggle").click((function (e) {
+        e.preventDefault();
+        $('.side-catalog').toggleClass("fold")
+    }))
+
+    
+
+
+    loadAsync("\/js\/jquery.nav.js", function () {
+        $('.catalog-body').onePageNav({
+            currentClass: "active",
+            changeHash: !1,
+            easing: "swing",
+            filter: "",
+            scrollSpeed: 700,
+            scrollOffset: 0,
+            scrollThreshold: .2,
+            begin: null,
+            end: null,
+            scrollChange: null,
+            padding: 80
+        });
+    });
+</script>
+
+
+
+
+
+
+</body>
+</html>
