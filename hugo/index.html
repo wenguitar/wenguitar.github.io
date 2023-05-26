@@ -271,12 +271,26 @@
 <p>不得不說，用Hugo架站真的會有一些小小的技術門檻，要申請Github帳戶、安裝VScode、跑終端機等等有的沒的，如果沒有程式底子，要靠自己查資料摸索真的會有難度，不過有課程手把手教學，跟著老師做其實就很簡單
 運用平日下班晚上的時間，我大概花四五天就照著課程說明用Hugo把網站架出來，成果就是現在你看到的這個網站，自己覺得非常滿意</p>
 <p>而且架出來的網站SEO也很好，網站上線一兩天，Google搜尋就能找到自己的網站，點進去也可以正確連到首頁了！</p>
-<h1 id="一級標題">一級標題</h1>
-<h2 id="二級標題">二級標題</h2>
-<h3 id="三級標題">三級標題</h3>
-<p><strong>這邊是粗體</strong></p>
-<p><em>這邊是斜體</em></p>
-<ol>
+<p>以下統整一些用Hugo寫作時，會用到的Markdown語法</p>
+<hr>
+<pre tabindex="0"><code># 一級標題
+</code></pre><h1 id="一級標題">一級標題</h1>
+<pre tabindex="0"><code>## 二級標題
+</code></pre><h2 id="二級標題">二級標題</h2>
+<pre tabindex="0"><code>### 三級標題
+</code></pre><h3 id="三級標題">三級標題</h3>
+<pre tabindex="0"><code>**兩個星號是粗體** 
+</code></pre><p><strong>兩個星號是粗體</strong></p>
+<pre tabindex="0"><code>*一個星號是斜體*
+</code></pre><p><em>一個星號是斜體</em></p>
+<pre tabindex="0"><code>1. 編號
+2. 編號
+
+* 爬山
+    * 爬玉山
+    * 爬雪山
+* 看電影
+</code></pre><ol>
 <li>編號</li>
 <li>編號</li>
 </ol>
@@ -289,17 +303,25 @@
 </li>
 <li>看電影</li>
 </ul>
-<blockquote>
-<p>引言：失敗為成功之母</p>
+<pre tabindex="0"><code>&gt; 大於符號是引言效果
+</code></pre><blockquote>
+<p>大於符號是引言效果</p>
 </blockquote>
-<p><a href="https://wenguitar01.co">不吃不可</a></p>
-<p><a href="/2018/06/02/istio08/">回到原點</a></p>
-<p>
-  <img src="/img/post.png" alt="">
+<pre tabindex="0"><code>[超連結](http://fm-cehn.tw)
+</code></pre><p><a href="http://fm-cehn.tw">超連結</a></p>
+<pre tabindex="0"><code>圖片
+![](/img/alishan.jpg)
+</code></pre><p>
+  <img src="/img/alishan.jpg" alt="">
 
 </p>
-<pre tabindex="0"><code>var = code
-</code></pre>
+<pre tabindex="0"><code>三個點```號之間```是程式碼區塊
+</code></pre><pre tabindex="0"><code>號之間
+</code></pre><p>三橫線是分隔線</p>
+<pre tabindex="0"><code>
+--- 
+</code></pre><hr>
+
 
                 
 
