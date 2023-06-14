@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>家醫科 陳文學醫師(Wen-Hsueh Chen, MD)</title>
+    <title>陳文學醫師(Wen-Hsueh Chen, MD)</title>
     <link>https://fm-chen.tw/</link>
-    <description>Recent content on 家醫科 陳文學醫師(Wen-Hsueh Chen, MD)</description>
+    <description>Recent content on 陳文學醫師(Wen-Hsueh Chen, MD)</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-tw</language>
     <lastBuildDate>Sun, 11 Jun 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://fm-chen.tw/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>  [上課進修] 大人學課程：職場大人學-課後心得 </title>
+      <title>  大人學課程：職場大人學-課後心得 </title>
       <link>https://fm-chen.tw/post/occupationdaren/</link>
       <pubDate>Sun, 11 Jun 2023 00:00:00 +0000</pubDate>
       
@@ -17,7 +17,7 @@
     </item>
     
     <item>
-      <title> [健康管理] 癌症篩檢時程表：5大癌症篩檢一次搞懂！ </title>
+      <title> 癌症篩檢時程表：5大癌症篩檢一次搞懂！ </title>
       <link>https://fm-chen.tw/post/cancerscreen/</link>
       <pubDate>Thu, 01 Jun 2023 00:00:00 +0000</pubDate>
       
@@ -26,7 +26,7 @@
     </item>
     
     <item>
-      <title> [醫師手札] 你知道5月12是什麼日子嗎？ </title>
+      <title> 你知道5月12是什麼日子嗎？ </title>
       <link>https://fm-chen.tw/post/nursesday/</link>
       <pubDate>Fri, 12 May 2023 00:00:00 +0000</pubDate>
       
@@ -35,7 +35,7 @@
     </item>
     
     <item>
-      <title>  [讀書筆記] 講求行動和產出的筆記法：⟪打造第二大腦⟫讀後心得 </title>
+      <title>  講求行動和產出的筆記法：⟪打造第二大腦⟫讀後心得 </title>
       <link>https://fm-chen.tw/post/secondbrain/</link>
       <pubDate>Sat, 06 May 2023 00:00:00 +0000</pubDate>
       
@@ -216,15 +216,15 @@
     
     <item>
       <title></title>
-      <link>https://fm-chen.tw/about/</link>
+      <link>https://fm-chen.tw/search/placeholder/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://fm-chen.tw/about/</guid>
-      <description>About Me Hi, I am Wen-Hsuheh,Chen , a family medicine physician. My expertise is in chronic disease management and home-based medical care. I am skilled at listening to patients&amp;rsquo; needs and discussing how they can improve their lifestyle habits because many chronic diseases stem from poor lifestyle habits. While medication is the simplest and most direct way to treat chronic diseases, I encourage patients to make adjustments in their daily</description>
+      <guid>https://fm-chen.tw/search/placeholder/</guid>
+      <description></description>
     </item>
     
     <item>
-      <title></title>
+      <title>  健康管理 </title>
       <link>https://fm-chen.tw/health-care/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
@@ -233,7 +233,7 @@
     </item>
     
     <item>
-      <title></title>
+      <title>  居家醫療 </title>
       <link>https://fm-chen.tw/home-care/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
@@ -242,21 +242,21 @@
     </item>
     
     <item>
-      <title></title>
+      <title>  醫師介紹 </title>
+      <link>https://fm-chen.tw/about/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://fm-chen.tw/about/</guid>
+      <description>About Me Hi, I am Wen-Hsuheh,Chen , a family medicine physician. My expertise is in chronic disease management and home-based medical care. I am skilled at listening to patients&amp;rsquo; needs and discussing how they can improve their lifestyle habits because many chronic diseases stem from poor lifestyle habits. While medication is the simplest and most direct way to treat chronic diseases, I encourage patients to make adjustments in their daily</description>
+    </item>
+    
+    <item>
+      <title>  門診時間 </title>
       <link>https://fm-chen.tw/notes/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://fm-chen.tw/notes/</guid>
       <description>門診時段／Outpatient Clinic Hours 目前門診在主要在嘉義長庚星期一下午和星期三上午， 鹿草衛生所和東石衛生所為駐診服務 目前星期三上午人數較多，可</description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://fm-chen.tw/search/placeholder/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://fm-chen.tw/search/placeholder/</guid>
-      <description></description>
     </item>
     
     <item>
