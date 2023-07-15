@@ -2,28 +2,37 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://fm-chen.tw/post/teachmodel/</loc>
-    <lastmod>2023-06-17T00:00:00+00:00</lastmod>
+    <loc>https://fm-chen.tw/post/ftnd/</loc>
+    <lastmod>2023-07-15T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://fm-chen.tw/categories/</loc>
-    <lastmod>2023-06-17T00:00:00+00:00</lastmod>
+    <lastmod>2023-07-15T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://fm-chen.tw/post/</loc>
-    <lastmod>2023-06-17T00:00:00+00:00</lastmod>
+    <lastmod>2023-07-15T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://fm-chen.tw/tags/</loc>
-    <lastmod>2023-06-17T00:00:00+00:00</lastmod>
+    <lastmod>2023-07-15T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://fm-chen.tw/tags/%E5%AE%B6%E9%86%AB%E7%A7%91/</loc>
+    <lastmod>2023-07-15T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://fm-chen.tw/tags/%E6%88%92%E8%8F%B8/</loc>
+    <lastmod>2023-07-15T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://fm-chen.tw/</loc>
+    <lastmod>2023-07-15T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://fm-chen.tw/categories/%E9%A0%90%E9%98%B2%E9%86%AB%E5%AD%B8/</loc>
+    <lastmod>2023-07-15T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://fm-chen.tw/post/teachmodel/</loc>
     <lastmod>2023-06-17T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://fm-chen.tw/categories/%E7%96%AB%E8%8B%97/</loc>
     <lastmod>2023-06-17T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://fm-chen.tw/tags/%E9%86%AB%E5%AD%B8%E6%95%99%E8%82%B2/</loc>
-    <lastmod>2023-06-17T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://fm-chen.tw/</loc>
     <lastmod>2023-06-17T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://fm-chen.tw/post/shingrixavaliable/</loc>
@@ -48,9 +57,6 @@
     <lastmod>2023-06-01T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://fm-chen.tw/tags/%E7%99%8C%E7%97%87%E7%AF%A9%E6%AA%A2/</loc>
-    <lastmod>2023-06-01T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://fm-chen.tw/categories/%E9%A0%90%E9%98%B2%E9%86%AB%E5%AD%B8/</loc>
     <lastmod>2023-06-01T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://fm-chen.tw/post/nursesday/</loc>
