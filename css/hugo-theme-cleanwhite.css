@@ -473,6 +473,8 @@ pre code{
         font-size:20px
     }
 }
+
+
 .post-preview>a{
     color:#404040
 }
@@ -647,7 +649,7 @@ form .row:first-child .floating-label-form-group{
     letter-spacing:1px;
     padding:10px;
     background-color:#fff;
-    border-radius:0
+    border-radius:999em
 }
 @media only screen and (min-width:768px){
     .pager li>a,.pager li>span{
@@ -686,6 +688,14 @@ img::-moz-selection{
     color:#fff;
     background:0 0
 }
+
+.card-img{
+    border-radius: 15px; /* 添加圓角 */
+    overflow: hidden; /* 隱藏超出部分，使圖片按照容器的圓角裁剪 */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); /* 添加陰影效果 */
+    
+}
+
 body{
     webkit-tap-highlight-color:#0085a1
 }
