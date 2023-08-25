@@ -2,40 +2,43 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://fm-chen.tw/post/metalecture/</loc>
-    <lastmod>2023-08-23T00:00:00+00:00</lastmod>
+    <loc>https://fm-chen.tw/post/v1record/</loc>
+    <lastmod>2023-08-25T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://fm-chen.tw/categories/</loc>
-    <lastmod>2023-08-23T00:00:00+00:00</lastmod>
+    <lastmod>2023-08-25T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://fm-chen.tw/post/</loc>
-    <lastmod>2023-08-23T00:00:00+00:00</lastmod>
+    <lastmod>2023-08-25T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://fm-chen.tw/tags/</loc>
+    <lastmod>2023-08-25T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://fm-chen.tw/tags/%E5%AE%B6%E9%86%AB%E7%A7%91/</loc>
+    <lastmod>2023-08-25T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://fm-chen.tw/categories/%E5%AE%B6%E9%86%AB%E7%A7%91/</loc>
+    <lastmod>2023-08-25T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://fm-chen.tw/tags/%E8%81%B7%E5%A0%B4%E9%97%9C%E4%BF%82/</loc>
+    <lastmod>2023-08-25T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://fm-chen.tw/</loc>
+    <lastmod>2023-08-25T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://fm-chen.tw/post/metalecture/</loc>
     <lastmod>2023-08-23T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://fm-chen.tw/tags/%E4%BB%A3%E8%AC%9D%E7%97%87%E5%80%99%E7%BE%A4/</loc>
     <lastmod>2023-08-23T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://fm-chen.tw/tags/%E5%AE%B6%E9%86%AB%E7%A7%91/</loc>
-    <lastmod>2023-08-23T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://fm-chen.tw/categories/%E5%AE%B6%E9%86%AB%E7%A7%91/</loc>
-    <lastmod>2023-08-23T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://fm-chen.tw/tags/%E8%AC%9B%E5%BA%A7/</loc>
-    <lastmod>2023-08-23T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://fm-chen.tw/</loc>
     <lastmod>2023-08-23T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://fm-chen.tw/post/rrc/</loc>
     <lastmod>2023-08-18T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://fm-chen.tw/post/aestheticsofwork/</loc>
-    <lastmod>2023-08-08T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://fm-chen.tw/tags/%E8%81%B7%E5%A0%B4%E9%97%9C%E4%BF%82/</loc>
     <lastmod>2023-08-08T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://fm-chen.tw/tags/%E8%AE%80%E6%9B%B8%E5%BF%83%E5%BE%97/</loc>
