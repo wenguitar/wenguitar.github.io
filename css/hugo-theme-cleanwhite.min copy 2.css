@@ -245,6 +245,17 @@ pre code{
     #huxblog_navbar.in li{
         opacity:1
     }
+    .call-to-action {  /* call to action button顏色 */
+        margin: 0px;
+                    border-radius: 0px;  
+                    background-color:  #fff9cd; 
+                    padding: 0px; 
+                    margin-top: 0px;        
+                           
+    }
+    .call-to-action:hover{  /* call to action button 懸停顏色 */
+        background-color: #70c0e2;     
+    }
 }
 .navbar-custom{
     background:0 0;
@@ -277,15 +288,6 @@ pre code{
     background:rgba(0,0,0,.12)
 }
 @media only screen and (min-width:768px){
-
-
-    .special-item a {
-        display: inline-block;
-        border: 1px solid #000; /* 邊框顏色 */
-        border-radius: 10px; /* 圓角半徑 */
-        padding: 5px 10px; /* 上下左右的內距 */
-        background-color: #f2f2f2; /* 背景顏色 */
-    }
     .navbar-custom{
         background:0 0;
         border-bottom:1px solid transparent
@@ -311,6 +313,26 @@ pre code{
     .navbar-custom .nav li a:active{
         background:0 0
     }
+    
+    .call-to-action {  /* call to action button顏色 */
+        margin: 0px;
+                    border-radius: 25px;  
+                    background-color:  #ffffff;
+                    padding: 0px; 
+                    margin-top: 10px;                
+    }
+    .call-to-action:hover{  /* call to action button 懸停顏色 */
+        background-color: #fff9e4;     
+    }
+    .navbar-custom .nav li a.call-to-action-button { /* call to action button 框內文字顏色 */
+        padding-top: 10px;
+        padding-bottom: 10px;
+        padding-left: 20px;
+        padding-right: 20px;
+        color:#0085a1;
+        !important;
+    }
+    
 }
 .navbar-custom.invert .navbar-toggle:active{	
     background-color:rgba(0,0,0,.05)	
