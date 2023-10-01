@@ -77,6 +77,13 @@ h1,h2,h3,h4,h5,h6{
     font-weight:700;
 }
 
+.underline-title { /* 使用這個class可以在標題下面加上底線 */
+    border-bottom: 2px solid  rgba(0, 133, 161, 0.65); /* 這會在標題下方添加一條底線 */
+    display: inline-block; /* 確保底線只在文字下方，而不是整個區塊 */
+    padding-bottom: 2px; /* 為底線和文字之間添加一些間距 */
+}
+
+
 h4{
     font-size:21px
 }
@@ -248,13 +255,21 @@ pre code{
     .call-to-action {  /* call to action button顏色 */
         margin: 0px;
                     border-radius: 0px;  
-                    background-color:  #fff9cd; 
+                    background-color:  #f1f1f1; 
                     padding: 0px; 
                     margin-top: 0px;        
                     transition: background-color 0.3s ease !important ;
     }
     .call-to-action:hover{  /* call to action button 懸停顏色 */
-        background-color: #70c0e2;     
+        background-color: #0085a1;     
+    }
+    .navbar-custom .nav li a.call-to-action-button { /* call to action button 框內文字顏色 */
+        color:#2b2b2b ;
+        transition: color 0.3s ease !important;
+        
+    }
+    .navbar-custom .nav li a.call-to-action-button:hover { /* call to action button 懸停框內文字顏色 */
+        color:#ffffff !important;
     }
 }
 .navbar-custom{
@@ -320,10 +335,10 @@ pre code{
                     background-color:  #ffffff;
                     padding: 0px; 
                     margin-top: 10px;    
-                    transition: background-color 0.5s ease !important ;            
+                    transition: background-color 0.3s ease !important ;            
     }
     .call-to-action:hover{  /* call to action button 懸停顏色 */
-        background-color: #fff9e4;     
+        background-color: #057aff;     
     }
     .navbar-custom .nav li a.call-to-action-button { /* call to action button 框內文字顏色 */
         padding-top: 10px;
@@ -331,8 +346,12 @@ pre code{
         padding-left: 20px;
         padding-right: 20px;
         color:#0085a1 !important;
+        transition: color 0.3s ease !important;
+        
     }
-    
+    .navbar-custom .nav li a.call-to-action-button:hover { /* call to action button 懸停框內文字顏色 */
+        color:#ffffff !important;
+    }
 }
 .navbar-custom.invert .navbar-toggle:active{	
     background-color:rgba(0,0,0,.05)	
@@ -721,10 +740,35 @@ img::-moz-selection{
 }
 
 .card-img{
-    border-radius: 15px; /* 添加圓角 */
+    border-radius: 8px; /* 添加圓角 */
     overflow: hidden; /* 隱藏超出部分，使圖片按照容器的圓角裁剪 */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); /* 添加陰影效果 */
-    
+    box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.15); /* 添加陰影效果 */
+    transition: all 0.2s ease-in-out; /* 添加過渡效果 */
+}
+
+.card-img:hover {
+    /*transform: scale(1.01); /* 懸停時放大圖片 */
+    box-shadow: 3px 5px 9px rgba(0, 0, 0, 0.25);  /*懸停時加深陰影 */
+    /* opacity: 0.95; /* 改變透明度 */
+}
+
+.index-btn {  /* 首頁按鈕 */
+    display:inline-block;
+    border:2px solid #bfbfbf;
+    border-radius:999em;
+    padding:10px 18px;
+    color:#bfbfbf;
+    line-height:18px;
+    font-size:16px;
+    text-decoration:none;
+    transition: background-color 0.2s ease-in-out;
+    transition: color 0.2s ease-in-out;
+}
+
+.index-btn:hover { /* 首頁按鈕懸停 */
+    background-color: #0085a1;
+    color: #ffffff;
+    border:2px solid #0085a1;
 }
 
 body{
