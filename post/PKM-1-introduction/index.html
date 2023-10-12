@@ -1,0 +1,776 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    
+    <meta property="og:site_name" content="家醫科 陳文學醫師">
+    <meta property="og:type" content="article">
+
+    
+    <meta property="og:image" content="/img/PKM.jpg">
+    <meta property="twitter:image" content="/img/PKM.jpg" />
+    
+
+    
+    <meta name="title" content=" 我的個人知識管理系統-(1) 引言  | 陳文學醫師 (Wen-Hsueh Chen, MD)" />
+    <meta property="og:title" content=" 我的個人知識管理系統-(1) 引言  | 陳文學醫師 (Wen-Hsueh Chen, MD)" />
+    <meta property="twitter:title" content=" 我的個人知識管理系統-(1) 引言  | 陳文學醫師 (Wen-Hsueh Chen, MD)" />
+    
+
+    
+    <meta name="description" content=" 這一系列文章想和你分享我個人的知識管理系統(PKM, personal knowledge management)，希望可以給你一些想法，讓你也能夠一步一步組建出屬於自己的知識管理系統 ">
+    <meta property="og:description" content=" 這一系列文章想和你分享我個人的知識管理系統(PKM, personal knowledge management)，希望可以給你一些想法，讓你也能夠一步一步組建出屬於自己的知識管理系統 " />
+    <meta property="twitter:description" content=" 這一系列文章想和你分享我個人的知識管理系統(PKM, personal knowledge management)，希望可以給你一些想法，讓你也能夠一步一步組建出屬於自己的知識管理系統 " />
+    
+
+    
+    <meta property="twitter:card" content="summary" />
+    
+    
+
+    <meta name="keyword"  content="陳文學, 陳文學醫師, 預防醫學, 慢性病, 居家醫療, 在宅醫療,嘉義 家醫科, 家醫科, 家庭醫學, 高血壓, 糖尿病, 高血脂, 健康檢查, 嘉義">
+    <link rel="shortcut icon" href="/img/favicon.ico">
+    <link rel="icon" href="/img/favicon.ico">
+
+    <title> 我的個人知識管理系統-(1) 引言   | 陳文學醫師 (Wen-Hsueh Chen, MD)</title>
+
+    <link rel="canonical" href="/post/PKM-1-introduction/">
+
+    
+    
+    
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+
+    
+    <link rel="stylesheet" href="/css/hugo-theme-cleanwhite.min.css">
+
+    
+    <link rel="stylesheet" href="/css/zanshang.css">
+
+    
+    <link href="https://cdn.jsdelivr.net/gh/FortAwesome/Font-Awesome@5.15.1/css/all.css" rel="stylesheet" type="text/css">
+
+    
+    
+
+    
+    <script src="/js/jquery.min.js"></script>
+
+    
+    <script src="/js/bootstrap.min.js"></script>
+
+    
+    <script src="/js/hux-blog.min.js"></script>
+
+    
+    <script src="/js/lazysizes.min.js"></script>
+
+    
+    
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-1RFPFJN9ZG"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-1RFPFJN9ZG');
+</script>
+
+
+</head>
+
+
+
+
+
+
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+
+    <div class="container-fluid">
+        
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">家醫科 陳文學醫師</a>
+        </div>
+
+        
+        
+        <div id="huxblog_navbar">
+            <div class="navbar-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="/about">醫師介紹</a>
+                    </li> 
+                    
+                    <li>
+                        <a href="/latestarticle">最新文章</a>
+                    </li> 
+                    
+                    
+
+                    <li>
+                        <a href="/health-care">預防醫學</a>
+		           </li>
+                    <li>
+                        <a href="/home-care">居家醫療</a>
+		           </li>
+                    <li>
+                        <a href="/archive">所有文章</a>
+		           </li>
+                   <li class="call-to-action">
+                    <a href="/notes" 
+                    class="call-to-action-button"
+                    > 
+                    門診預約</a>
+                    </li>
+		            <li>
+                        <a href="/search"><i class="fa fa-search"></i></a>
+		           </li>
+                </ul>
+            </div>
+        </div>
+        
+    </div>
+    
+</nav>
+<script>
+    
+    
+    
+    var $body   = document.body;
+    var $toggle = document.querySelector('.navbar-toggle');
+    var $navbar = document.querySelector('#huxblog_navbar');
+    var $collapse = document.querySelector('.navbar-collapse');
+
+    $toggle.addEventListener('click', handleMagic)
+    function handleMagic(e){
+        if ($navbar.className.indexOf('in') > 0) {
+        
+            $navbar.className = " ";
+            
+            setTimeout(function(){
+                
+                if($navbar.className.indexOf('in') < 0) {
+                    $collapse.style.height = "0px"
+                }
+            },400)
+        }else{
+        
+            $collapse.style.height = "auto"
+            $navbar.className += " in";
+        }
+    }
+</script>
+
+
+
+
+<style type="text/css">
+    header.intro-header {
+        background-image: url('/img/PKM.jpg')
+    }
+</style>
+
+<header class="intro-header" >
+
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    
+                    <div class="tags">
+                        
+                        <a class="tag" href="/tags/%E7%9F%A5%E8%AD%98%E7%AE%A1%E7%90%86" title="知識管理">
+                            知識管理
+                        </a>
+                        
+                        <a class="tag" href="/tags/%E7%AD%86%E8%A8%98%E6%B3%95" title="筆記法">
+                            筆記法
+                        </a>
+                        
+                    </div>
+                    <h1> 我的個人知識管理系統-(1) 引言  </h1>
+                    <h2 class="subheading"> 一個有效捕捉知識、促進思考和寫作的系統 </h2>
+                    
+                    <span class="meta">
+                        
+                            作者 /   
+                            
+                             <a href="/about" >   陳文學醫師 </a>
+                             
+                            &nbsp; &nbsp; 
+                            <time>2023/10/10</time>
+                            
+                            
+                            
+                            
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+
+
+
+<article>
+    <div class="container">
+        <div class="row">
+
+            
+            <div class="
+                col-lg-8 col-lg-offset-2
+                col-md-10 col-md-offset-1
+                post-container">
+
+                
+                <h2 id="引言">引言</h2>
+<p>這一系列文章想和你分享我個人的知識管理系統(PKM, personal knowledge management)，想要分享的原因是我使用過很多種筆記軟體、諸如Evernote、Notion、Heptabase，也讀了一些筆記相關的書籍，像是<a href="https://fm-chen.tw/post/secondbrain/">⟪打造第二大腦⟫</a> 、⟪卡片盒筆記⟫、 ⟪子彈思考整理術⟫、 ⟪知識複利筆記術⟫、 ⟪打造超人筆記⟫等等，使用這些軟體和看書的過程中，就會發現他們可能只滿足了你部分的需求，沒有辦法靠單一工具就滿足你所有知識管理的需求</p>
+<p>希望這系列的文章可以給你一些想法，讓你也能夠一步一步組建出屬於自己的知識管理系統</p>
+<blockquote>
+<p><strong>系列文目錄</strong><br>
+(1) 引言 <br>
+(2) 總覽PKM<br>
+(3) 步驟一「Explore探索」<br>
+(4) 步驟二「Capture捕捉」<br>
+(5) 步驟三「Distill萃取」<br>
+(6) 步驟四「Organized組織」<br>
+(7) 步驟五「Create創作」<br>
+(8) 步驟六「Share分享」<br>
+(9) 總結 &amp; 相關資源整理<br></p>
+</blockquote>
+<hr>
+<h2 id="個人知識管理系統是什麼以及不是什麼">個人知識管理系統是什麼，以及不是什麼？</h2>
+<p>首先來釐清一下PKM到底是什麼，以及不是什麼：</p>
+<h3 id="個人知識管理系統是什麼">個人知識管理系統是什麼？</h3>
+<ol>
+<li>
+<p><strong>是一套方法</strong>：PKM的核心是方法論，追求更有效率的輸入、處理、輸出，透過最適合的工具來實踐，在個人知識管理系統中的每個步驟，都會有一個最核心的目標，為了達到這個目標，每個人可以選擇最適合自己的工具去執行。<br><br>例如在「捕捉訊息」這個步驟，目標是要「快速的把訊息捕捉下來」，為了達到這樣的目標，你可以選擇手寫筆記、照相、數位打字等等都可以，只要選擇你熟悉、你用得上手的工具就可以<br><br><br></p>
+</li>
+<li>
+<p><strong>是一個持續的過程</strong>：PKM需要你持續的投入時間去維護，當然透過好的方法，可以大幅降低整個知識系統混亂的程度，以及所需要維護的心力，但你還是會需要花一點時間去做，就像房間不會自動變整齊變乾淨一樣，一個系統沒有介入的話，一對會走向最大亂度、最低能量<br><br><br></p>
+</li>
+<li>
+<p><strong>個人化</strong>：PKM是相當個人化的，有些人可能就偏愛手寫，有些人可能偏愛數位方式，這都很好，你不必關注現在在流行什麼，你更應該關注的是哪種工具比較適合你<br><br></p>
+</li>
+</ol>
+<hr>
+<h3 id="個人知識管理系統不是什麼">個人知識管理系統不是什麼？</h3>
+<ol>
+<li>
+<p><strong>不是某個筆記軟體</strong>：網路上常有人比較各種筆記軟體的優劣，然後也各有擁護者，但這些大多是就「工具」的功能上去做討論，而不是就「方法」去做討論。<br><br>有人會說用mac內建的apple note最好用，但他可能說不清楚到底要怎麼運用apple note，才能讓整個PKM更順暢。你需要做的是先搞清楚PKM每個步驟的目標，然後再依據自己的喜好和需求去挑選工具，不用執著於某個軟體<br><br><br></p>
+</li>
+<li>
+<p><strong>不是把資料存進去就好</strong>：PKM的其中一個重點是思考和組織架構，一個好的PKM應該要能刺激你去思考和聯想，如果僅僅只是把資料一股腦地塞進去，這比較像是資料庫和檔案庫。<br><br>就像圖書館裡頭存放了很多的書本，但如果沒有人去閱讀、去運用、去把這些知識串連起來、那是沒有意義的<br><br><br></p>
+</li>
+<li>
+<p><strong>不是萬能的</strong>：個人知識管理系統的重點是建立個人的思考體系，有些東西其實不太會被納進來，像是每個月的電話費帳單、會議記錄、行事曆等等，除非你探索的領域跟這些相關，否則一些日常庶務雜事的資料是不會放到PKM裡頭的<br><br></p>
+</li>
+</ol>
+<hr>
+<h2 id="為什麼你需要個人知識管理系統">為什麼你需要個人知識管理系統?</h2>
+<p>需要個人知識管理系統，主要有兩個考量點，一個是解決資訊過載、一個是建立自己的思考體系</p>
+<h3 id="1-解決資訊過載">1. 解決資訊過載</h3>
+<p>有研究指出，現代人每天接觸的資訊量將近34GB，已經遠遠超過古代人一輩子所能接觸的資訊量</p>
+<p>身處現代，你的一天可能是這樣渡過的：</p>
+<blockquote>
+<p><br>早上起床先拿起手機看通知，邊吃早餐邊滑手機看社群媒體，<br>通勤的時候戴上藍牙耳機開始聽podcast，到公司上班打開公司信箱開始處理業務，<br>中間休息喘口氣還有午餐時間又是拿出手機滑呀滑，下班通勤繼續聽podcast，<br>晚餐邊吃邊看youtube，看完滑滑社群媒體，洗澡，<br>然後睡前躺在床上再滑一下社群媒體，最後後累了才闔眼睡覺。
+<br><br>
+一天<strong>大概只剩洗澡和睡覺的時候腦袋是淨空的</strong>
+<br><br></p>
+</blockquote>
+<p>但值得停下來思考的是，你接觸到那的多的資訊中，哪些是真的對你有幫助的？</p>
+<p>有些人選擇把這些接觸到資訊毫不保留地存起來，特別是現在數位筆記很方便，看到什麼好東西就都往裡面塞，但是這樣做就會產生資訊焦慮，覺得東西很多根本消化不完，然後又不斷地去找尋新的資訊往筆記系統裡面囤</p>
+<p>其實這有點類似實體的囤積行為，去逛街時你可能會反覆購買某種東西，但回到家中卻發現根本已經一堆同樣的商品。例如說可能重複購買牙膏、衛生紙、或是反覆買到同一種花色的衣服等等</p>
+<p>其實背後原因，就是因為你看不到已經擁有的東西，才會一直覺得自己還沒有</p>
+<p>在資訊上也是，因為你搞不清楚自己已經懂什麼、已經掌握什麼知識，才會有種匱乏感，想要把所有接觸到的資訊都吃下來、囤下來</p>
+<p>而個人知識管理系統可以清出地讓你知道，「自己已經學會什麼」、「自己還不會什麼」，可以大幅的降低資訊焦慮和過載，也可以讓自己的專注力花在真正更需要的資訊上</p>
+<blockquote>
+<p><a href="https://www.darencademy.com/article/view/id/16485">延伸閱讀：大人學，想要克服資訊焦慮？ 你其實可以這麼做。</a></p>
+</blockquote>
+<hr>
+<h3 id="2-建立自己的思考體系">2. 建立自己的思考體系</h3>
+<p>第二個需要個人知識管理的原因，主要是要建立屬於個人的思考體系，而這點至關重要，因為這是你在一個領域最終會走向平庸還是成為大師的關鍵之一</p>
+<p>第一次聽到大師之路和平庸之路，是在大人學EP264這一集聽到的，裡頭Joe提到，平庸之路就是那些能夠快速讓你達到60分的東西，例如學煮菜總是加味精、學騎腳踏車加裝輔助輪等等，這些方法能讓你快速到達60分，也就是剛好及格、可接受的程度，但是你的程度和實力也就是停在這邊上不去了</p>
+<p>如果你想要往上精進，走向80分、100分甚至120分成為大師，就不能靠先前的那些招式，像是煮菜要從頭學習各種食材的味道、烹調技巧等等，騎腳踏就要拔掉輔助輪，去學習怎麼樣用身體去平衡，從零開始，建立屬於自己的知識體系，而不是靠那些快速的招式</p>
+<blockquote>
+<p>
+  <img src="/img/PKM1.jpg" alt="平庸之路與大師之路">
+
+<strong>平庸之路 VS 大師之路</strong><br>
+平庸之路雖然一開始很快就可以達到及格分數，但是後續就上不去了，而大師之路則相反</p>
+</blockquote>
+<hr>
+<p>而在現實中，還真的有很多這樣的例子</p>
+<p>在米其林主廚江振誠的書<a href="https://fm-chen.tw/post/aestheticsofwork/">⟪工作美學⟫</a>當中，他就有談到自己在料理路上的成長歷程，最一開始他也是照著老師的教法、食譜去料理，某一天他突然發現到，這些都是別人的料理，別人的做法，根本沒有自己的東西，所以下定決心，跑到偏遠的小島上，把自己歸零，用自己的感官和體悟去重新認識食材，開創屬於自己的味覺體系：八角哲學</p>
+<p>書中也有提到，他能夠開法式餐廳、又開燒烤、又開川菜餐廳，橫跨多種料理但都能取的成功的原因，是因為他已經有自己的味覺體系，碰到一道料理、一項食材，他馬上就能在腦中連結到可搭配變化的方式，這是他最初只會照別人的方法做菜時所無法達到的境界</p>
+<blockquote>
+<p><a href="https://fm-chen.tw/post/aestheticsofwork/">延伸閱讀：⟪工作美學⟫ - 不只談工作，在成長、帶團隊、品牌經營方面都細節滿滿的一本書</a></p>
+</blockquote>
+<hr>
+<p>再來是知識工作者、講師這類的職業，如果只是寫寫文章，可能不需要太複雜的知識體系，但如果需要製作課程、寫書等等，那就要比較複雜和完整的知識體系。</p>
+<p>像是大人學的Joe在做⟪用經營公司的思維經營你的人生⟫這套熱賣超過5000人次的線上課程時，就很常畫一些圖來輔助思考，最後也會做成<a href="https://sites.google.com/ftpm.com.tw/shop/%E9%A6%96%E9%A0%81">思維地圖</a>給上課的學員參考</p>
+<p>另外在前面提到資訊焦慮的<a href="https://www.darencademy.com/article/view/id/16485">那篇文章</a>中，Joe也是畫出了在他腦中是如何從點連到線、從線組成面的知識架構</p>
+<p>而獲得Y Combinator加速器青睞的Heptabase的創辦人詹雨安(Alan Chan)，也是用Heptabase這個軟體本身來建立自己在創業、做產品上的思考體系，從他寫的<a href="https://medium.com/heptabase/my-vision-the-roadmap-d2fbf92fdf97">文章</a>你講可以感受得出，他的思考深度遠超過一般社群貼文的水平</p>
+<p>這些例子都一再的說明，你想要有傲人的產出，背後所仰賴的都是你個人的知識體系，這些是抄不來、也無法速成，是要靠你自己一磚一瓦搭建出來的</p>
+<hr>
+<p>就我自己過去學習樂器的經驗，照樂譜彈奏就是一個能讓你快速達到60分的東西，例如聽到某一首新歌，你很喜歡想要彈，馬上就到網路上搜尋那首歌的樂譜，拿到樂譜後你就能夠彈得七八分像，但也就只能停在這邊了，如果你沒有靠自己去聆聽音樂，自己對音樂有一些想法，彈出來的東西大概也就只能自娛，沒辦法到娛人的程度</p>
+<p>在過去，我們只能仰賴自己的大腦去做這樣的事情，或許有些人在這方面有特別的天賦，或是意識到要如何運作這樣的知識體系，所以走上大師之路</p>
+<p>但現在，我們有更好的方法和工具，相信就算是一般人，只要學會方法和選擇合適的工具，也可以輕易的組建出屬於自己的思考體系</p>
+<blockquote>
+<p>下一篇文章：<a href="/post/PKM-2-preview">我的個人知識管理系統-(2) 總覽KPM</a></p>
+</blockquote>
+
+
+                
+
+                
+              
+                <section class="section">
+                    
+                    
+                    
+                    <br>
+                    <hr>
+                      <h4>您可能有興趣的文章</h4>
+                      <ul>
+                        
+                          <li>
+                            <a href="/post/secondbrain/">  講求行動和產出的筆記法：⟪打造第二大腦⟫讀後心得 </a>
+                            
+                          </li>
+                        
+                          <li>
+                            <a href="/post/homecarequalify/"> 居家醫療申請資格 ─ 符合這三項條件可以申請  </a>
+                            
+                          </li>
+                        
+                          <li>
+                            <a href="/post/cad-easy/"> [懶人包] 認識冠心病：症狀辨識及預防 </a>
+                            
+                          </li>
+                        
+                          <li>
+                            <a href="/post/vsed/"> [研討會] 112年安寧夏季研討會 參加心得 </a>
+                            
+                          </li>
+                        
+                      </ul>
+                    
+                </section>
+
+                
+                <hr>
+                <ul class="pager">
+                    
+                    <li class="previous">
+                        <a href="/post/homecarequalify/" data-toggle="tooltip" data-placement="top" title=" 居家醫療申請資格 ─ 符合這三項條件可以申請  ">&larr;
+                            上一篇文章</a>
+                    </li>
+                    
+                    
+                </ul>
+                
+
+                
+
+
+
+
+
+                
+
+            </div>
+
+            
+
+            
+            
+            <div class="
+                col-lg-2 col-lg-offset-0
+                visible-lg-block
+                sidebar-container
+                catalog-container">
+                <div class="side-catalog">
+                    <hr class="hidden-sm hidden-xs">
+                    <h5>
+                        <a class="catalog-toggle" href="#">文章目錄</a>
+                    </h5>
+                    <ul class="catalog-body"></ul>
+                </div>
+            </div>
+            
+
+            
+            <div class="
+                col-lg-8 col-lg-offset-2
+                col-md-10 col-md-offset-1
+                sidebar-container">
+
+                
+                
+                <section>
+                    <hr class="hidden-sm hidden-xs">
+                    <h5><a href="/tags/">FEATURED TAGS</a></h5>
+                    <div class="tags">
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        <a href="/tags/%E5%A4%A7%E4%BA%BA%E5%AD%B8" title="大人學">
+                            大人學
+                        </a>
+                        
+                        
+                        
+                        <a href="/tags/%E5%AD%B8%E8%A1%93%E7%99%BC%E8%A1%A8" title="學術發表">
+                            學術發表
+                        </a>
+                        
+                        
+                        
+                        <a href="/tags/%E5%AE%89%E5%AF%A7%E7%B7%A9%E5%92%8C" title="安寧緩和">
+                            安寧緩和
+                        </a>
+                        
+                        
+                        
+                        
+                        
+                        <a href="/tags/%E5%AE%B6%E9%86%AB%E7%A7%91" title="家醫科">
+                            家醫科
+                        </a>
+                        
+                        
+                        
+                        <a href="/tags/%E5%B1%85%E5%AE%B6%E9%86%AB%E7%99%82" title="居家醫療">
+                            居家醫療
+                        </a>
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        <a href="/tags/%E7%96%AB%E8%8B%97%E6%B3%A8%E5%B0%84" title="疫苗注射">
+                            疫苗注射
+                        </a>
+                        
+                        
+                        
+                        
+                        
+                        <a href="/tags/%E7%99%BB%E5%B1%B1" title="登山">
+                            登山
+                        </a>
+                        
+                        
+                        
+                        
+                        
+                        <a href="/tags/%E7%A0%94%E8%A8%8E%E6%9C%83" title="研討會">
+                            研討會
+                        </a>
+                        
+                        
+                        
+                        
+                        
+                        <a href="/tags/%E7%AD%86%E8%A8%98%E6%B3%95" title="筆記法">
+                            筆記法
+                        </a>
+                        
+                        
+                        
+                        <a href="/tags/%E7%B6%B2%E8%AA%8C" title="網誌">
+                            網誌
+                        </a>
+                        
+                        
+                        
+                        <a href="/tags/%E8%81%B7%E5%A0%B4%E9%97%9C%E4%BF%82" title="職場關係">
+                            職場關係
+                        </a>
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        <a href="/tags/%E8%AE%80%E6%9B%B8%E5%BF%83%E5%BE%97" title="讀書心得">
+                            讀書心得
+                        </a>
+                        
+                        
+                        
+                        <a href="/tags/%E9%86%AB%E5%AD%B8%E6%95%99%E8%82%B2" title="醫學教育">
+                            醫學教育
+                        </a>
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                    </div>
+                </section>
+                
+
+                
+                
+                <section>
+                    <hr>
+                    <h5>FRIENDS</h5>
+                    <ul class="list-inline">
+                        
+                        <li><a target="_blank" href="https://medium.com/%e5%87%bd%e5%bc%8f%e7%87%9f%e9%a4%8a">函式營養</a></li>
+                        
+                    </ul>
+                </section>
+                
+            </div>
+        </div>
+    </div>
+</article>
+
+
+
+
+
+
+
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">                  
+                    
+                    <li>
+                        <a href="mailto:dr8732@cgmh.org.tw">
+                            <span class="fa-stack fa-lg">
+                                <i class="fas fa-circle fa-stack-2x"></i>
+                                <i class="fas fa-envelope fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+		           
+                    
+                    
+                    
+                    
+                    <li>
+                        <a target="_blank" href="https://www.facebook.com/fm.chen.tw">
+                            <span class="fa-stack fa-lg">
+                                <i class="fas fa-circle fa-stack-2x"></i>
+                                <i class="fab fa-facebook fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+		           
+
+		            
+                    
+                    
+                    
+                    
+                    
+                    
+                    <li>
+                        <a target="_blank" href="https://medium.com/%e9%99%b3%e6%96%87%e5%ad%b8%e9%86%ab%e5%b8%ab">
+                            <span class="fa-stack fa-lg">
+                                <i class="fas fa-circle fa-stack-2x"></i>
+                                <i class="fab fa-medium fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    
+                    
+                    
+                    
+            
+            
+            
+           
+                   <li>
+                       <a href="http://fm-chen.tw/index.xml" rel="alternate" type="application/rss+xml" title="家醫科 陳文學醫師" >
+                           <span class="fa-stack fa-lg">
+                               <i class="fas fa-circle fa-stack-2x"></i>
+                               <i class="fas fa-rss fa-stack-1x fa-inverse"></i>
+                           </span>
+                       </a>
+                   </li>
+            
+             </ul>
+		<p class="copyright text-muted">
+                    Copyright &copy; 家醫科 陳文學醫師 2023
+                    <br>
+                    Proudly powered by HUGO | <a href="https://themes.gohugo.io/hugo-theme-cleanwhite">CleanWhite</a> 
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+
+
+<script>
+    function loadAsync(u, c) {
+      var d = document, t = 'script',
+          o = d.createElement(t),
+          s = d.getElementsByTagName(t)[0];
+      o.src = u;
+      if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+      s.parentNode.insertBefore(o, s);
+    }
+</script>
+
+
+
+
+
+
+<script>
+    
+    if($('#tag_cloud').length !== 0){
+        loadAsync("/js/jquery.tagcloud.js",function(){
+            $.fn.tagcloud.defaults = {
+                
+                color: {start: '#bbbbee', end: '#0085a1'},
+            };
+            $('#tag_cloud a').tagcloud();
+        })
+    }
+</script>
+
+
+<script>
+    loadAsync("https://cdn.jsdelivr.net/npm/fastclick@1.0.6/lib/fastclick.min.js", function(){
+        var $nav = document.querySelector("nav");
+        if($nav) FastClick.attach($nav);
+    })
+</script>
+
+
+
+
+
+
+<script type="text/javascript">
+    function generateCatalog(selector) {
+
+        
+        
+        
+        
+            _containerSelector = 'div.post-container'
+        
+
+        
+        var P = $(_containerSelector), a, n, t, l, i, c;
+        a = P.find('h1,h2,h3,h4,h5,h6');
+
+        
+        $(selector).html('')
+
+        
+        a.each(function () {
+            n = $(this).prop('tagName').toLowerCase();
+            i = "#" + $(this).prop('id');
+            t = $(this).text();
+            c = $('<a href="' + i + '" rel="nofollow">' + t + '</a>');
+            l = $('<li class="' + n + '_nav"></li>').append(c);
+            $(selector).append(l);
+        });
+        return true;
+    }
+
+    generateCatalog(".catalog-body");
+
+    
+    $(".catalog-toggle").click((function (e) {
+        e.preventDefault();
+        $('.side-catalog').toggleClass("fold")
+    }))
+
+    
+
+
+    loadAsync("\/js\/jquery.nav.js", function () {
+        $('.catalog-body').onePageNav({
+            currentClass: "active",
+            changeHash: !1,
+            easing: "swing",
+            filter: "",
+            scrollSpeed: 700,
+            scrollOffset: 0,
+            scrollThreshold: .2,
+            begin: null,
+            end: null,
+            scrollChange: null,
+            padding: 80
+        });
+    });
+</script>
+
+
+
+
+
+
+</body>
+</html>
