@@ -99,16 +99,19 @@ a:hover,a:focus{
     color:#0085a1
 }
 a img:hover,a img:focus{
-    cursor:zoom-in
+    cursor: pointer
 }
 article{
     overflow:hidden;
 }
 blockquote{
-    color:gray;
-    font-style:italic;
-    font-size:.95em;
-    margin:20px 0 20px
+    color:rgb(94, 94, 94);
+    font-size:.9em;
+    font-family: source-code-pro, Menlo, Monaco, "Courier New", Courier, monospace;
+    background-color:rgb(246, 246, 246);
+    margin:20px 0 20px;
+    padding: 20px 20px 20px 20px;
+    border-radius: 8px ;/* 這裡設定的是圓角的半徑 */
 }
 blockquote p{
     margin:0
@@ -770,6 +773,23 @@ img::-moz-selection{
     color: #ffffff;
     border:2px solid #0085a1;
 }
+
+/* 以下社交分享圖案 */
+a i {
+    font-size: 20px;
+    margin-right: 17px; /* spacing between icons*/
+    margin-top:10px;
+    margin-left:5px;
+    color: #646473; /* color of the icons*/
+    transition: filter 0.3s;
+ }
+ a i:hover {
+    filter: brightness(30%); /* reduces the brightness to 50% on hover */
+}
+ .copy-link {
+    cursor: pointer;  /* Change cursor to hand pointer when hovering */
+ }
+/* 社交分享圖案以上 */
 
 body{
     webkit-tap-highlight-color:#0085a1
