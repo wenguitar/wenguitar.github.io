@@ -133,9 +133,7 @@
                     > 
                     門診預約</a>
                     </li>
-		            <li>
-                        <a href="/search"><i class="fa fa-search"></i></a>
-		           </li>
+                    
                 </ul>
             </div>
         </div>
@@ -174,6 +172,8 @@
 
 
 
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 
 <style type="text/css">
     header.intro-header {
@@ -220,6 +220,7 @@
 
 
 
+
 <article>
     <div class="container">
         <div class="row">
@@ -231,6 +232,9 @@
                 post-container">
 
                 
+               
+
+
                 <p>我大概是從2022年初的時候開始經營網誌，主要是職涯上的考量，因為完成住院醫師的訓練升上主治醫師，多少也是要練習寫一些文章</p>
 <p>雖然我之前有用過Wordpress架網站的經驗，但考量到架站成本，就還是先用Medium來經營看看</p>
 <p>但是經營了一年多，確實遇到一些問題：</p>
@@ -355,6 +359,41 @@
 
 
                 
+
+                 
+                    <br>
+                    <h4>分享文章</h4>
+                    
+                    <a href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2ffm-chen.tw%2fhugo%2f" target="_blank">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+
+                    
+                    <a href="https://twitter.com/share?url=https%3a%2f%2ffm-chen.tw%2fhugo%2f&text=%20%e6%8a%8a%e7%b6%b2%e8%aa%8c%e5%be%9eMedium%e6%90%ac%e5%ae%b6%e5%88%b0Hugo%20" target="_blank">
+                        <i class="fab fa-x-twitter"></i></a>
+                    
+                    <a href="https://line.me/R/msg/text/?%25E6%258A%258A%25E7%25B6%25B2%25E8%25AA%258C%25E5%25BE%259Emedium%25E6%2590%25AC%25E5%25AE%25B6%25E5%2588%25B0hugo%0Ahttps%3a%2f%2ffm-chen.tw%2fhugo%2f" target="_blank">
+                        <i class="fab fa-line"></i></a>
+                    
+                    
+                        <a href="mailto:?subject=%25E6%258A%258A%25E7%25B6%25B2%25E8%25AA%258C%25E5%25BE%259Emedium%25E6%2590%25AC%25E5%25AE%25B6%25E5%2588%25B0hugo&body=Check out this article: https%3a%2f%2ffm-chen.tw%2fhugo%2f" target="_blank">
+                            <i class="fas fa-envelope"></i></a>
+
+
+                    
+                    <a onclick="copyArticleURL()" class="copy-link"><i class="fas fa-link"></i></a>
+                                            <script>
+                                            function copyArticleURL() {
+                                                const textarea = document.createElement('textarea');
+                                                textarea.textContent = 'https:\/\/fm-chen.tw\/hugo\/';
+                                                textarea.style.position = 'fixed'; 
+                                                document.body.appendChild(textarea);
+                                                textarea.select();
+                                                document.execCommand('copy');
+                                                document.body.removeChild(textarea);
+                                                alert('已複製文章連結');
+                                            }
+                                            </script>
 
                 
                 <section class="section">

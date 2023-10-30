@@ -133,9 +133,7 @@
                     > 
                     門診預約</a>
                     </li>
-		            <li>
-                        <a href="/search"><i class="fa fa-search"></i></a>
-		           </li>
+                    
                 </ul>
             </div>
         </div>
@@ -174,6 +172,8 @@
 
 
 
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 
 <style type="text/css">
     header.intro-header {
@@ -224,6 +224,7 @@
 
 
 
+
 <article>
     <div class="container">
         <div class="row">
@@ -235,6 +236,9 @@
                 post-container">
 
                 
+               
+
+
                 <h2 id="引言">引言</h2>
 <p>這一系列文章想和你分享我個人的知識管理系統(PKM, personal knowledge management)，想要分享的原因是我使用過很多種筆記軟體、諸如Evernote、Notion、Heptabase，也讀了一些筆記相關的書籍，像是<a href="https://fm-chen.tw/post/secondbrain/">⟪打造第二大腦⟫</a> 、<a href="https://www.books.com.tw/exep/assp.php/k7256580/products/0010922143?utm_source=k7256580&amp;utm_medium=ap-books&amp;utm_content=recommend&amp;utm_campaign=ap-202310">⟪卡片盒筆記⟫</a>、 <a href="https://www.books.com.tw/exep/assp.php/k7256580/products/0010926376?sloc=main&amp;utm_source=k7256580&amp;utm_medium=ap-books&amp;utm_content=recommend&amp;utm_campaign=ap-202310">⟪子彈思考整理術⟫</a>、 <a href="https://www.books.com.tw/exep/assp.php/k7256580/products/0010962277?sloc=main&amp;utm_source=k7256580&amp;utm_medium=ap-books&amp;utm_content=recommend&amp;utm_campaign=ap-202310">⟪知識複利筆記術⟫</a>、 <a href="https://www.books.com.tw/exep/assp.php/k7256580/products/0010965079?sloc=main&amp;utm_source=k7256580&amp;utm_medium=ap-books&amp;utm_content=recommend&amp;utm_campaign=ap-202310">⟪打造超人筆記⟫</a>等等，使用這些軟體和看書的過程中，就會發現他們可能只滿足了你部分的需求，沒有辦法靠單一工具就滿足你所有知識管理的需求。</p>
 <p>今年受到<a href="https://pinchlime.com/blog/my-personal-knowledge-management-system-2023/">P.J. Wu</a>和<a href="https://www.ernestchiang.com/zh/posts/2023/ernest-pkm-workflow/">Ernest Chiang</a>的個人知識管理系統的啟發，我也開始搭建起自己的知識管理系統，也終於有了一些心得</p>
@@ -421,6 +425,41 @@
 
 
                 
+
+                 
+                    <br>
+                    <h4>分享文章</h4>
+                    
+                    <a href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2ffm-chen.tw%2fpost%2fPKM-1-introduction%2f" target="_blank">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+
+                    
+                    <a href="https://twitter.com/share?url=https%3a%2f%2ffm-chen.tw%2fpost%2fPKM-1-introduction%2f&text=%20%e5%80%8b%e4%ba%ba%e7%9f%a5%e8%ad%98%e7%ae%a1%e7%90%86%e7%b3%bb%e7%b5%b1%28PKM%29%e6%98%af%e4%bb%80%e9%ba%bc%3f%203%e5%a4%a7%e5%84%aa%e5%8b%a2%e4%b8%80%e6%ac%a1%e6%90%9e%e6%87%82%20%20" target="_blank">
+                        <i class="fab fa-x-twitter"></i></a>
+                    
+                    <a href="https://line.me/R/msg/text/?%25E5%2580%258B%25E4%25BA%25BA%25E7%259F%25A5%25E8%25AD%2598%25E7%25AE%25A1%25E7%2590%2586%25E7%25B3%25BB%25E7%25B5%25B1pkm%25E6%2598%25AF%25E4%25BB%2580%25E9%25BA%25BC-3%25E5%25A4%25A7%25E5%2584%25AA%25E5%258B%25A2%25E4%25B8%2580%25E6%25AC%25A1%25E6%2590%259E%25E6%2587%2582%0Ahttps%3a%2f%2ffm-chen.tw%2fpost%2fPKM-1-introduction%2f" target="_blank">
+                        <i class="fab fa-line"></i></a>
+                    
+                    
+                        <a href="mailto:?subject=%25E5%2580%258B%25E4%25BA%25BA%25E7%259F%25A5%25E8%25AD%2598%25E7%25AE%25A1%25E7%2590%2586%25E7%25B3%25BB%25E7%25B5%25B1pkm%25E6%2598%25AF%25E4%25BB%2580%25E9%25BA%25BC-3%25E5%25A4%25A7%25E5%2584%25AA%25E5%258B%25A2%25E4%25B8%2580%25E6%25AC%25A1%25E6%2590%259E%25E6%2587%2582&body=Check out this article: https%3a%2f%2ffm-chen.tw%2fpost%2fPKM-1-introduction%2f" target="_blank">
+                            <i class="fas fa-envelope"></i></a>
+
+
+                    
+                    <a onclick="copyArticleURL()" class="copy-link"><i class="fas fa-link"></i></a>
+                                            <script>
+                                            function copyArticleURL() {
+                                                const textarea = document.createElement('textarea');
+                                                textarea.textContent = 'https:\/\/fm-chen.tw\/post\/PKM-1-introduction\/';
+                                                textarea.style.position = 'fixed'; 
+                                                document.body.appendChild(textarea);
+                                                textarea.select();
+                                                document.execCommand('copy');
+                                                document.body.removeChild(textarea);
+                                                alert('已複製文章連結');
+                                            }
+                                            </script>
 
                 
                 <section class="section">
