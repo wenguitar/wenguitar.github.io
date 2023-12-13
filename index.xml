@@ -494,6 +494,15 @@
     </item>
     
     <item>
+      <title>  所有文章 </title>
+      <link>https://fm-chen.tw/all-post-nav/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://fm-chen.tw/all-post-nav/</guid>
+      <description>文章導覽 醫療資訊 個人成長</description>
+    </item>
+    
+    <item>
       <title>  醫師介紹 </title>
       <link>https://fm-chen.tw/about/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -503,12 +512,12 @@
     </item>
     
     <item>
-      <title>  門診預約 </title>
+      <title>  門診時間 </title>
       <link>https://fm-chen.tw/notes/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://fm-chen.tw/notes/</guid>
-      <description>最新門診時間 2023年11月更新 線上預約：長庚網路掛號系統 註 1：星期一下午時段候診時間較短，可多利用 註 2：義竹衛生所、鹿草衛生所為駐診服務，</description>
+      <description>最新門診時間 2023年12月更新 線上預約：長庚網路掛號系統 註 1：星期一下午時段候診時間較短，可多利用 註 2：義竹衛生所、鹿草衛生所為駐診服務，</description>
     </item>
     
     <item>
