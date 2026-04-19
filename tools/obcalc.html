@@ -1,0 +1,732 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<title>減重計算機 · 個人化評估工具</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg: #f6f8f8;
+    --surface: #ffffff;
+    --ink: #1a2b2e;
+    --ink-2: #37484c;
+    --ink-3: #6b7e82;
+    --ink-4: #9aacb0;
+    --line: #e4ebec;
+    --line-2: #f0f4f4;
+    --brand: #2b7a78;        /* 深藍綠 */
+    --brand-2: #3aafa9;      /* 亮藍綠 */
+    --brand-3: #def2f1;      /* 淡藍綠 */
+    --brand-ink: #17403f;
+    --warn: #c88a2d;
+    --warn-bg: #fbf3e3;
+    --danger: #b14a4a;
+    --danger-bg: #f8e9e8;
+    --ok: #3d8a5f;
+    --ok-bg: #e4f2ea;
+    --radius: 10px;
+    --radius-lg: 14px;
+    --shadow-sm: 0 1px 2px rgba(20,40,45,.04), 0 1px 1px rgba(20,40,45,.03);
+    --shadow: 0 1px 2px rgba(20,40,45,.04), 0 8px 24px -12px rgba(20,40,45,.12);
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0;padding:0}
+  body{
+    font-family: 'Noto Sans TC', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    background: var(--bg);
+    color: var(--ink);
+    font-size: 15px;
+    line-height: 1.55;
+    -webkit-font-smoothing: antialiased;
+  }
+  .num{font-family:'Inter','Noto Sans TC',sans-serif;font-variant-numeric: tabular-nums;}
+  a{color: var(--brand); text-decoration: none}
+
+  /* Header */
+  .top{
+    background: var(--surface);
+    border-bottom: 1px solid var(--line);
+  }
+  .top-inner{
+    max-width: 1280px; margin: 0 auto; padding: 18px 28px;
+    display:flex; align-items:center; justify-content: space-between;
+  }
+  .brand-row{display:flex; align-items:center; gap:14px}
+  .logo{
+    width:34px;height:34px;border-radius:8px;
+    background: linear-gradient(135deg, var(--brand) 0%, var(--brand-2) 100%);
+    display:grid;place-items:center;color:#fff;font-weight:700;
+    font-family:'Inter',sans-serif; font-size:15px;
+    box-shadow: inset 0 0 0 1px rgba(255,255,255,.1);
+  }
+  .brand-title{font-weight:600; letter-spacing:.2px}
+  .brand-sub{color: var(--ink-3); font-size:12.5px; margin-top:1px}
+  .top-meta{color: var(--ink-3); font-size:12.5px; display:flex; gap:18px; align-items:center}
+  .top-meta .dot{width:6px;height:6px;border-radius:50%;background:var(--ok);display:inline-block;margin-right:6px;vertical-align:middle}
+
+  /* Layout */
+  .wrap{max-width: 1280px; margin: 0 auto; padding: 24px 28px 60px}
+  .grid{
+    display:grid;
+    grid-template-columns: 380px 1fr;
+    gap: 24px;
+  }
+  @media (max-width: 980px){ .grid{grid-template-columns: 1fr} }
+
+  .card{
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-sm);
+  }
+  .card-h{
+    padding: 18px 22px 14px;
+    border-bottom: 1px solid var(--line-2);
+  }
+  .card-h h2{margin:0; font-size:15px; font-weight:600; letter-spacing:.3px}
+  .card-h p{margin:4px 0 0; color: var(--ink-3); font-size:12.5px}
+  .card-body{padding: 20px 22px}
+
+  /* Sidebar form */
+  .side{position:sticky; top:16px; align-self:start}
+  .field{margin-bottom: 16px}
+  .field:last-child{margin-bottom:0}
+  .label{
+    display:flex; justify-content: space-between; align-items:baseline;
+    font-size: 12.5px; color: var(--ink-2); font-weight:500; margin-bottom:6px;
+    letter-spacing: .3px;
+  }
+  .label .hint{color: var(--ink-4); font-weight:400; font-size:11.5px}
+  .inp{
+    width:100%; border:1px solid var(--line); border-radius: var(--radius);
+    padding: 10px 12px; font: inherit; color: var(--ink);
+    background:#fff; transition: border-color .15s, box-shadow .15s;
+  }
+  .inp:focus{outline:none; border-color: var(--brand-2); box-shadow: 0 0 0 3px rgba(58,175,169,.15)}
+  .inp-wrap{position:relative}
+  .inp-wrap .u{
+    position:absolute; right:12px; top:50%; transform: translateY(-50%);
+    color: var(--ink-4); font-size:12.5px; pointer-events:none;
+  }
+  .row{display:grid; grid-template-columns: 1fr 1fr; gap:12px}
+  .seg{
+    display:flex; background: var(--line-2); border-radius: 8px; padding: 3px;
+    gap: 2px;
+  }
+  .seg button{
+    flex:1; border:0; background: transparent; padding: 7px 10px;
+    font: inherit; font-size: 13px; color: var(--ink-2); border-radius: 6px;
+    cursor:pointer; transition: all .15s;
+  }
+  .seg button.on{background:#fff; color: var(--ink); box-shadow: var(--shadow-sm); font-weight:500}
+
+  .divider{height:1px; background: var(--line-2); margin: 18px 0}
+
+  /* Results column */
+  .res-grid{display:grid; gap:20px}
+
+  /* BMI card */
+  .bmi-top{display:grid; grid-template-columns: 1fr 1.4fr; gap: 28px; align-items:center}
+  @media (max-width: 760px){ .bmi-top{grid-template-columns: 1fr} }
+  .bmi-big{
+    font-family:'Inter',sans-serif;
+    font-size: 72px; font-weight:600; line-height:1; letter-spacing:-1.5px;
+    color: var(--ink);
+  }
+  .bmi-big .unit{font-size:18px; color: var(--ink-3); font-weight:400; margin-left:8px; letter-spacing:0}
+  .bmi-label{font-size: 12.5px; color: var(--ink-3); text-transform: uppercase; letter-spacing:1.5px; margin-bottom:8px}
+  .bmi-badge{
+    display:inline-flex; align-items:center; gap:8px;
+    padding: 6px 12px; border-radius: 999px;
+    font-size: 13px; font-weight: 500; margin-top: 10px;
+  }
+  .bmi-badge .d{width:8px;height:8px;border-radius:50%}
+
+  /* BMI scale bar */
+  .scale{margin-top:4px}
+  .scale-track{
+    height: 14px; border-radius: 7px; position: relative;
+    background: linear-gradient(to right,
+      #b9d6f0 0%, #b9d6f0 20%,
+      #b6d9c3 20%, #b6d9c3 42%,
+      #f3d79a 42%, #f3d79a 58%,
+      #f0b694 58%, #f0b694 78%,
+      #d99a9a 78%, #d99a9a 100%);
+    box-shadow: inset 0 0 0 1px rgba(0,0,0,.04);
+  }
+  .scale-marker{
+    position:absolute; top:-6px; width:3px; height:26px;
+    background: var(--ink); border-radius:2px;
+    transform: translateX(-50%);
+    transition: left .4s cubic-bezier(.4,0,.2,1);
+  }
+  .scale-marker::after{
+    content:''; position:absolute; top:-5px; left:50%;
+    transform: translateX(-50%);
+    width:0;height:0;border-left:5px solid transparent;border-right:5px solid transparent;
+    border-top:5px solid var(--ink);
+  }
+  .scale-legend{
+    display:grid; grid-template-columns: 20fr 22fr 16fr 20fr 22fr;
+    margin-top: 10px; font-size: 11px; color: var(--ink-3);
+    gap: 2px;
+  }
+  .scale-legend span{text-align:center; line-height:1.35}
+  .scale-legend span b{display:block;color:var(--ink-2); font-weight:500; font-size:11.5px}
+
+  /* Metric chips */
+  .metrics{display:grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-top: 22px}
+  @media (max-width: 600px){ .metrics{grid-template-columns: 1fr 1fr} }
+  .metric{
+    border: 1px solid var(--line); border-radius: var(--radius);
+    padding: 14px 16px; background: #fcfdfd;
+  }
+  .metric .k{font-size: 11.5px; color: var(--ink-3); letter-spacing:.5px; text-transform: uppercase}
+  .metric .v{font-family:'Inter',sans-serif; font-size: 22px; font-weight:600; margin-top:2px; letter-spacing:-.3px}
+  .metric .v .su{font-size:12px; color:var(--ink-3); font-weight:400; margin-left:4px}
+  .metric .n{font-size: 11.5px; color: var(--ink-4); margin-top:4px}
+
+  /* Goal slider */
+  .goal-head{display:flex; justify-content: space-between; align-items: center; margin-bottom: 18px; gap:20px; flex-wrap: wrap; padding: 6px 0 16px; border-bottom: 1px dashed var(--line); }
+  .target-input .inp{text-align:right}
+  .goal-current{font-size: 13px; color: var(--ink-3)}
+  .goal-current b{color: var(--ink); font-weight:600}
+  .goal-pct-wrap{display:flex; align-items: baseline; gap: 10px}
+  .goal-pct{
+    font-family:'Inter',sans-serif; font-size: 44px; font-weight:600;
+    color: var(--brand); letter-spacing:-1px; line-height: 1;
+  }
+  .goal-pct .sign{font-size:26px; margin-right:2px}
+  .goal-after{color: var(--ink-2); font-size: 13px}
+  .goal-after b{font-family:'Inter',sans-serif; color: var(--ink); font-size:16px; font-weight:600}
+
+  /* Slider */
+  .slider-wrap{position:relative; padding: 10px 0 6px}
+  .slider{
+    -webkit-appearance:none; appearance:none;
+    width:100%; height:6px; border-radius:3px;
+    background: linear-gradient(to right, var(--brand) 0%, var(--brand) var(--fill,20%), var(--line) var(--fill,20%), var(--line) 100%);
+    outline: none;
+  }
+  .slider::-webkit-slider-thumb{
+    -webkit-appearance:none; appearance:none;
+    width:22px;height:22px;border-radius:50%;
+    background:#fff; border: 2px solid var(--brand);
+    box-shadow: 0 2px 6px rgba(20,40,45,.18);
+    cursor: pointer; transition: transform .1s;
+  }
+  .slider::-webkit-slider-thumb:hover{transform: scale(1.08)}
+  .slider::-moz-range-thumb{
+    width:22px;height:22px;border-radius:50%;
+    background:#fff; border: 2px solid var(--brand);
+    box-shadow: 0 2px 6px rgba(20,40,45,.18); cursor:pointer;
+  }
+  .slider-ticks{
+    display:flex; justify-content: space-between;
+    margin-top: 12px; font-size: 11.5px; color: var(--ink-4);
+    font-family:'Inter',sans-serif;
+    padding: 0 2px;
+  }
+  .slider-ticks button{
+    background:none; border:0; color: inherit; font: inherit; cursor: pointer;
+    padding: 4px 8px; border-radius: 6px;
+  }
+  .slider-ticks button:hover{background: var(--brand-3); color: var(--brand-ink)}
+  .slider-ticks button.active{color: var(--brand); font-weight:600}
+
+  /* Benefits */
+  .benefits{
+    display:grid; grid-template-columns: repeat(2, 1fr); gap: 12px;
+    margin-top: 22px;
+  }
+  @media (max-width: 600px){ .benefits{grid-template-columns: 1fr} }
+  .benefit{
+    border:1px solid var(--line); border-radius: var(--radius);
+    padding: 14px 16px; background:#fff;
+    display:flex; gap: 12px; align-items:flex-start;
+    transition: border-color .2s, background .2s, opacity .25s;
+  }
+  .benefit.off{opacity:.35}
+  .benefit .ic{
+    width: 34px; height: 34px; border-radius: 8px;
+    background: var(--brand-3); color: var(--brand);
+    display:grid; place-items:center; flex-shrink:0;
+    font-size: 16px; font-weight:600; font-family:'Inter',sans-serif;
+  }
+  .benefit .t{font-weight:600; font-size:13.5px; margin-bottom: 2px}
+  .benefit .d{font-size: 12.5px; color: var(--ink-3); line-height:1.5}
+
+  /* Medication */
+  .med-intro{
+    background: var(--brand-3); border-radius: var(--radius);
+    padding: 14px 16px; font-size: 13px; color: var(--brand-ink);
+    display:flex; gap: 12px; align-items:flex-start; margin-bottom: 18px;
+    border: 1px solid rgba(43,122,120,.15);
+  }
+  .med-intro .ic{flex-shrink:0; font-size:16px; line-height:1}
+  .med-intro b{font-weight:600}
+
+  .med-list{display:grid; gap: 12px}
+  .med{
+    border: 1px solid var(--line); border-radius: var(--radius);
+    padding: 16px 18px; background: #fff;
+    transition: all .2s;
+  }
+  .med.rec{
+    border-color: var(--brand-2);
+    box-shadow: 0 0 0 1px var(--brand-2), 0 4px 16px -8px rgba(43,122,120,.3);
+    background: linear-gradient(180deg, #fbfefe 0%, #ffffff 30%);
+  }
+  .med-head{display:flex; justify-content: space-between; align-items:flex-start; gap: 12px; margin-bottom: 10px}
+  .med-title{font-size: 15px; font-weight:600; letter-spacing:.2px}
+  .med-title .en{color: var(--ink-3); font-weight: 400; font-size: 12.5px; margin-left: 6px; font-family:'Inter',sans-serif; letter-spacing:0}
+  .med-tag{
+    font-size: 11px; font-weight:600; letter-spacing:.8px; text-transform: uppercase;
+    padding: 4px 9px; border-radius: 4px; white-space:nowrap;
+    background: var(--brand); color: #fff;
+  }
+  .med-tag.muted{background: var(--line-2); color: var(--ink-3)}
+  .med-grid{
+    display:grid; grid-template-columns: 1fr 1fr; gap: 14px 22px;
+    margin-top: 6px;
+  }
+  @media (max-width:600px){ .med-grid{grid-template-columns: 1fr}}
+  .med-item .k{font-size: 11px; color: var(--ink-4); text-transform:uppercase; letter-spacing: .8px; margin-bottom: 3px}
+  .med-item .v{font-size: 13px; color: var(--ink-2); line-height: 1.55}
+  .med-suit{
+    margin-top: 14px; padding-top: 12px; border-top: 1px dashed var(--line);
+    font-size: 12.5px; color: var(--ink-3);
+  }
+  .med-suit b{color: var(--ink-2); font-weight:500}
+
+  /* Disclaimer */
+  .disclaim{
+    margin-top: 24px;
+    background: var(--warn-bg);
+    border: 1px solid #f0dfb7;
+    border-radius: var(--radius);
+    padding: 14px 18px;
+    font-size: 12.5px; color: #7a5a20;
+    display:flex; gap: 12px; align-items:flex-start;
+  }
+  .disclaim b{color:#5b4416; font-weight:600}
+  .disclaim .ic{flex-shrink:0;font-size:15px;line-height:1.3}
+
+  /* Footer */
+  footer{
+    max-width: 1280px; margin: 0 auto;
+    padding: 20px 28px 40px;
+    color: var(--ink-4); font-size: 12px; text-align: center;
+  }
+
+  /* Category colors */
+  .c-under{background:#eaf3fa; color:#2f5b80}
+  .c-under .d{background:#4a8bc2}
+  .c-normal{background:#e4f2ea; color:#2f6a47}
+  .c-normal .d{background:#4a9c6a}
+  .c-over{background:#fbf1d9; color:#8a6520}
+  .c-over .d{background:#d4a340}
+  .c-ob1{background:#fae5d6; color:#8a4a22}
+  .c-ob1 .d{background:#d57a3b}
+  .c-ob2{background:#f5d9d9; color:#7a3232}
+  .c-ob2 .d{background:#b14a4a}
+  .c-ob3{background:#ebd0d5; color:#5a2435}
+  .c-ob3 .d{background:#833040}
+
+  /* Fade animation */
+  .fade-swap{animation: fade .35s ease}
+  @keyframes fade{from{opacity:0; transform: translateY(2px)} to{opacity:1; transform: none}}
+
+  /* BMR ring */
+  .ring-wrap{display:flex; align-items:center; gap:16px}
+  .ring{width:64px;height:64px;flex-shrink:0}
+</style>
+</head>
+<body>
+
+<div class="top">
+  <div class="top-inner">
+    <div class="brand-row">
+      <div class="logo">W</div>
+      <div>
+        <div class="brand-title">減重評估計算機</div>
+        <div class="brand-sub">BMI · BMR · 減重目標效益分析</div>
+      </div>
+    </div>
+    <div class="top-meta">
+      <span><span class="dot"></span>依台灣/亞洲成人標準</span>
+      <span>衛教工具 · v1.0</span>
+    </div>
+  </div>
+</div>
+
+<div class="wrap">
+  <div class="grid">
+
+    <!-- =================== LEFT: INPUTS =================== -->
+    <aside class="side">
+      <div class="card">
+        <div class="card-h">
+          <h2>個人資料</h2>
+          <p>輸入資料後，右側結果會即時更新</p>
+        </div>
+        <div class="card-body">
+
+          <div class="row">
+            <div class="field">
+              <div class="label">身高 <span class="hint">Height</span></div>
+              <div class="inp-wrap">
+                <input id="f-height" class="inp num" type="number" min="100" max="230" step="0.1" value="165">
+                <span class="u">cm</span>
+              </div>
+            </div>
+            <div class="field">
+              <div class="label">體重 <span class="hint">Weight</span></div>
+              <div class="inp-wrap">
+                <input id="f-weight" class="inp num" type="number" min="30" max="250" step="0.1" value="82">
+                <span class="u">kg</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="field">
+              <div class="label">年齡 <span class="hint">Age</span></div>
+              <div class="inp-wrap">
+                <input id="f-age" class="inp num" type="number" min="15" max="100" step="1" value="42">
+                <span class="u">歲</span>
+              </div>
+            </div>
+            <div class="field">
+              <div class="label">性別 <span class="hint">Sex</span></div>
+              <div class="seg" id="seg-sex">
+                <button data-v="male" class="on">男性</button>
+                <button data-v="female">女性</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="field">
+            <div class="label">活動量 <span class="hint">用於估算每日熱量</span></div>
+            <div class="seg" id="seg-act" style="flex-wrap:wrap">
+              <button data-v="1.2" class="on">久坐</button>
+              <button data-v="1.375">輕度</button>
+              <button data-v="1.55">中度</button>
+              <button data-v="1.725">高度</button>
+            </div>
+          </div>
+
+          <div class="divider"></div>
+
+          <div style="font-size:12px; color:var(--ink-3); line-height:1.6">
+            <b style="color:var(--ink-2)">使用方式</b><br>
+            1. 輸入基本資料，右側即時顯示 BMI 分級<br>
+            2. 拖曳減重百分比滑桿或直接輸入目標體重<br>
+            3. 即時查看不同目標對應的健康益處
+          </div>
+        </div>
+      </div>
+    </aside>
+
+    <!-- =================== RIGHT: RESULTS =================== -->
+    <main class="res-grid">
+
+      <!-- BMI CARD -->
+      <section class="card">
+        <div class="card-h">
+          <h2>BMI 身體質量指數</h2>
+          <p>體重(kg) ÷ 身高²(m²) · 採用台灣肥胖防治標準</p>
+        </div>
+        <div class="card-body">
+          <div class="bmi-top">
+            <div>
+              <div class="bmi-label">BMI</div>
+              <div class="bmi-big"><span id="v-bmi" class="num">0.0</span><span class="unit">kg/m²</span></div>
+              <div id="v-badge" class="bmi-badge c-normal"><span class="d"></span><span id="v-cat">—</span></div>
+            </div>
+            <div class="scale">
+              <div class="bmi-label">分級尺規</div>
+              <div class="scale-track">
+                <div id="v-marker" class="scale-marker" style="left:50%"></div>
+              </div>
+              <div class="scale-legend">
+                <span><b>過輕</b>&lt; 18.5</span>
+                <span><b>正常</b>18.5–23.9</span>
+                <span><b>過重</b>24–26.9</span>
+                <span><b>輕度肥胖</b>27–29.9</span>
+                <span><b>中重度肥胖</b>≥ 30</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="metrics">
+            <div class="metric">
+              <div class="k">理想體重範圍</div>
+              <div class="v num"><span id="v-ideal">—</span><span class="su">kg</span></div>
+              <div class="n">BMI 18.5 – 23.9</div>
+            </div>
+            <div class="metric">
+              <div class="k">基礎代謝率 BMR</div>
+              <div class="v num"><span id="v-bmr">—</span><span class="su">kcal/日</span></div>
+              <div class="n">Mifflin-St Jeor 公式</div>
+            </div>
+            <div class="metric">
+              <div class="k">每日總熱量 TDEE</div>
+              <div class="v num"><span id="v-tdee">—</span><span class="su">kcal/日</span></div>
+              <div class="n">BMR × 活動係數</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- GOAL CARD -->
+      <section class="card">
+        <div class="card-h">
+          <h2>減重目標與健康益處</h2>
+          <p>拖曳滑桿，查看減去不同體重百分比帶來的益處</p>
+        </div>
+        <div class="card-body">
+
+          <div class="goal-head">
+            <div class="goal-pct-wrap">
+              <div class="goal-pct num">−<span id="v-pct">5</span><span class="sign">%</span></div>
+              <div>
+                <div class="goal-current">目標減重 <b class="num" id="v-kg">—</b> 公斤</div>
+                <div class="goal-after">約為目前體重的 <b class="num" id="v-pct2">—</b>%</div>
+              </div>
+            </div>
+            <div class="target-input">
+              <div class="label" style="margin-bottom:6px; font-size:11.5px; color:var(--ink-3); text-transform:uppercase; letter-spacing:.8px">目標體重</div>
+              <div class="inp-wrap" style="width:150px">
+                <input id="f-target" class="inp num" type="number" min="30" max="250" step="0.1" value="77.9" style="font-size:18px; font-weight:600; padding:10px 40px 10px 14px">
+                <span class="u">kg</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="slider-wrap">
+            <input id="f-goal" class="slider" type="range" min="0" max="25" step="0.5" value="5">
+            <div class="slider-ticks">
+              <button data-p="0">0%</button>
+              <button data-p="5" class="active">5%</button>
+              <button data-p="10">10%</button>
+              <button data-p="15">15%</button>
+              <button data-p="20">20%</button>
+              <button data-p="25">25%</button>
+            </div>
+          </div>
+
+          <div class="benefits" id="benefits">
+            <!-- rendered by JS -->
+          </div>
+        </div>
+      </section>
+
+    </main>
+  </div>
+</div>
+
+<footer>
+  減重評估計算機 · 資料依據：台灣肥胖醫學會、衛生福利部國民健康署、WHO 成人肥胖指引
+  　·　<a href="https://fm-chen.tw" style="color:inherit; text-decoration:underline;">回到部落格 →</a>
+</footer>
+
+<script>
+/* =============== State =============== */
+const state = {
+  height: 165,
+  weight: 82,
+  age: 42,
+  sex: 'male',
+  activity: 1.2,
+  goalPct: 5,
+};
+
+// Flag to avoid feedback loops when syncing target <-> slider
+let _syncing = false;
+
+/* =============== Utilities =============== */
+const $ = (s)=>document.querySelector(s);
+const fmt = (n, d=1)=> (isFinite(n) ? n.toFixed(d) : '—');
+const fmt0 = (n)=> (isFinite(n) ? Math.round(n).toLocaleString() : '—');
+
+/* =============== BMI / BMR =============== */
+function calcBMI(h, w){
+  if (!h || !w) return NaN;
+  const m = h/100;
+  return w / (m*m);
+}
+function bmiCategory(bmi){
+  // Taiwan / Asian standard
+  if (bmi < 18.5)  return {key:'under',  label:'體重過輕', cls:'c-under',  pos: (bmi/18.5)*20 };
+  if (bmi < 24)    return {key:'normal', label:'健康體位', cls:'c-normal', pos: 20 + ((bmi-18.5)/(24-18.5))*22 };
+  if (bmi < 27)    return {key:'over',   label:'體重過重', cls:'c-over',   pos: 42 + ((bmi-24)/(27-24))*16 };
+  if (bmi < 30)    return {key:'ob1',    label:'輕度肥胖', cls:'c-ob1',    pos: 58 + ((bmi-27)/(30-27))*20 };
+  if (bmi < 35)    return {key:'ob2',    label:'中度肥胖', cls:'c-ob2',    pos: 78 + ((bmi-30)/(35-30))*15 };
+  return              {key:'ob3',    label:'重度肥胖', cls:'c-ob3',    pos: Math.min(98, 93 + ((bmi-35)/5)*5) };
+}
+function calcBMR(w, h, age, sex){
+  // Mifflin-St Jeor
+  const base = 10*w + 6.25*h - 5*age;
+  return sex === 'male' ? base + 5 : base - 161;
+}
+function idealRange(h){
+  const m = h/100;
+  return {low: 18.5*m*m, high: 23.9*m*m};
+}
+
+/* =============== Benefits data =============== */
+const BENEFITS = [
+  { min:3,  ic:'♥', t:'血壓改善', d:'收縮壓平均下降 3–5 mmHg，心血管負擔降低。' },
+  { min:5,  ic:'△', t:'血糖控制進步', d:'HbA1c 可下降約 0.5%，糖尿病前期可逆轉風險顯著提升。' },
+  { min:5,  ic:'◇', t:'血脂改善', d:'三酸甘油酯下降 20%，HDL 好膽固醇上升。' },
+  { min:7,  ic:'○', t:'睡眠呼吸中止改善', d:'呼吸中止指數（AHI）可降低 20–30%。' },
+  { min:10, ic:'◎', t:'脂肪肝逆轉', d:'肝臟脂肪含量明顯減少，肝指數回復正常。' },
+  { min:10, ic:'＋', t:'膝關節壓力減輕', d:'每減 1 kg，膝蓋負擔減少約 4 kg，疼痛改善。' },
+  { min:15, ic:'✦', t:'糖尿病緩解機會', d:'部分第二型糖尿病患者可達臨床緩解，減少用藥。' },
+  { min:15, ic:'◆', t:'心血管事件風險降低', d:'中長期心肌梗塞、中風風險顯著下降。' },
+  { min:20, ic:'★', t:'代謝症候群完全逆轉', d:'多項代謝指標回復正常，整體死亡率顯著下降。' },
+  { min:20, ic:'✚', t:'生活品質大幅提升', d:'體能、睡眠、自信與心理健康全面改善。' },
+];
+
+/* =============== Render =============== */
+function render(){
+  const { height, weight, age, sex, activity, goalPct } = state;
+  const bmi = calcBMI(height, weight);
+  const cat = bmiCategory(bmi);
+
+  // BMI
+  $('#v-bmi').textContent = fmt(bmi, 1);
+  $('#v-cat').textContent = cat.label;
+  const badge = $('#v-badge');
+  badge.className = 'bmi-badge ' + cat.cls;
+  badge.classList.add('fade-swap');
+  setTimeout(()=> badge.classList.remove('fade-swap'), 400);
+  $('#v-marker').style.left = Math.max(1, Math.min(99, cat.pos)) + '%';
+
+  // Ideal
+  const ir = idealRange(height);
+  $('#v-ideal').textContent = `${fmt(ir.low,1)}–${fmt(ir.high,1)}`;
+
+  // BMR / TDEE
+  const bmr = calcBMR(weight, height, age, sex);
+  const tdee = bmr * activity;
+  $('#v-bmr').textContent = fmt0(bmr);
+  $('#v-tdee').textContent = fmt0(tdee);
+
+  // Goal
+  $('#v-pct').textContent = fmt(goalPct, goalPct % 1 === 0 ? 0 : 1);
+  const kg = weight * (goalPct/100);
+  const target = weight - kg;
+  $('#v-kg').textContent = fmt(kg, 1);
+  $('#v-pct2').textContent = fmt(100 - goalPct, (100-goalPct) % 1 === 0 ? 0 : 1);
+
+  // Sync target input (unless user is typing in it)
+  if (!_syncing){
+    _syncing = true;
+    $('#f-target').value = fmt(target, 1);
+    _syncing = false;
+  }
+
+  // Slider fill
+  const slider = $('#f-goal');
+  const fillPct = (goalPct - slider.min) / (slider.max - slider.min) * 100;
+  slider.style.setProperty('--fill', Math.max(0, Math.min(100, fillPct)) + '%');
+
+  // Slider ticks active state
+  document.querySelectorAll('.slider-ticks button').forEach(b=>{
+    b.classList.toggle('active', +b.dataset.p === Math.round(goalPct));
+  });
+
+  // Benefits
+  renderBenefits(goalPct);
+}
+
+function renderBenefits(pct){
+  const el = $('#benefits');
+  el.innerHTML = BENEFITS.map(b => `
+    <div class="benefit ${pct >= b.min ? '' : 'off'}">
+      <div class="ic">${b.ic}</div>
+      <div>
+        <div class="t">${b.t} <span style="color:var(--ink-4); font-weight:400; font-size:12px; margin-left:4px">≥ ${b.min}%</span></div>
+        <div class="d">${b.d}</div>
+      </div>
+    </div>
+  `).join('');
+}
+
+/* =============== Events =============== */
+function bindSeg(id, key, isNumber=false){
+  document.querySelectorAll(`#${id} button`).forEach(b=>{
+    b.addEventListener('click', ()=>{
+      document.querySelectorAll(`#${id} button`).forEach(x=>x.classList.remove('on'));
+      b.classList.add('on');
+      state[key] = isNumber ? parseFloat(b.dataset.v) : b.dataset.v;
+      render();
+    });
+  });
+}
+
+function bindNum(id, key){
+  const el = $('#'+id);
+  el.addEventListener('input', ()=>{
+    const v = parseFloat(el.value);
+    if (!isNaN(v)) state[key] = v;
+    render();
+  });
+}
+
+bindNum('f-height', 'height');
+bindNum('f-weight', 'weight');
+bindNum('f-age', 'age');
+bindSeg('seg-sex', 'sex');
+bindSeg('seg-act', 'activity', true);
+
+$('#f-goal').addEventListener('input', (e)=>{
+  state.goalPct = parseFloat(e.target.value);
+  render();
+});
+
+document.querySelectorAll('.slider-ticks button').forEach(b=>{
+  b.addEventListener('click', ()=>{
+    const p = parseFloat(b.dataset.p);
+    state.goalPct = p;
+    $('#f-goal').value = p;
+    render();
+  });
+});
+
+// Target weight <-> goal% two-way binding
+$('#f-target').addEventListener('input', (e)=>{
+  if (_syncing) return;
+  const tgt = parseFloat(e.target.value);
+  if (isNaN(tgt) || state.weight <= 0) return;
+  let pct = ((state.weight - tgt) / state.weight) * 100;
+  // Clamp to slider range
+  pct = Math.max(0, Math.min(25, pct));
+  // Round to 0.5
+  pct = Math.round(pct * 2) / 2;
+  state.goalPct = pct;
+  _syncing = true;
+  $('#f-goal').value = pct;
+  _syncing = false;
+  // Re-render but preserve the target input value the user typed
+  const userTyped = e.target.value;
+  render();
+  // If user typed a value outside the 0-25% clamp range, don't overwrite it mid-typing
+  if (document.activeElement === $('#f-target')){
+    $('#f-target').value = userTyped;
+  }
+});
+
+$('#f-target').addEventListener('blur', ()=>{
+  // On blur, snap the field to the canonical computed value
+  render();
+});
+
+render();
+</script>
+
+</body>
+</html>
