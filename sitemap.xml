@@ -2,22 +2,37 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://fm-chen.tw/post/2025-10-03-vaccine-lecture/</loc>
+    <lastmod>2025-10-03T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://fm-chen.tw/categories/</loc>
+    <lastmod>2025-10-03T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://fm-chen.tw/post/</loc>
+    <lastmod>2025-10-03T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://fm-chen.tw/tags/</loc>
+    <lastmod>2025-10-03T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://fm-chen.tw/tags/%E5%AE%B6%E9%86%AB%E7%A7%91/</loc>
+    <lastmod>2025-10-03T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://fm-chen.tw/</loc>
+    <lastmod>2025-10-03T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://fm-chen.tw/tags/%E6%88%90%E4%BA%BA%E7%96%AB%E8%8B%97/</loc>
+    <lastmod>2025-10-03T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://fm-chen.tw/tags/%E8%87%A8%E5%BB%A0%E6%9C%8D%E5%8B%99/</loc>
+    <lastmod>2025-10-03T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://fm-chen.tw/categories/%E8%87%A8%E5%BB%A0%E6%9C%8D%E5%8B%99/</loc>
+    <lastmod>2025-10-03T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://fm-chen.tw/post/train-lecture/</loc>
     <lastmod>2025-08-19T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://fm-chen.tw/categories/</loc>
-    <lastmod>2025-08-19T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://fm-chen.tw/post/</loc>
-    <lastmod>2025-08-19T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://fm-chen.tw/tags/</loc>
-    <lastmod>2025-08-19T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://fm-chen.tw/tags/%E5%A4%A7%E4%BA%BA%E5%AD%B8/</loc>
-    <lastmod>2025-08-19T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://fm-chen.tw/</loc>
     <lastmod>2025-08-19T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://fm-chen.tw/tags/%E8%81%B7%E5%A0%B4%E9%97%9C%E4%BF%82/</loc>
@@ -36,9 +51,6 @@
     <lastmod>2025-07-14T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://fm-chen.tw/categories/%E5%AD%B8%E8%A1%93%E7%99%BC%E8%A1%A8/</loc>
-    <lastmod>2025-07-14T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://fm-chen.tw/tags/%E5%AE%B6%E9%86%AB%E7%A7%91/</loc>
     <lastmod>2025-07-14T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://fm-chen.tw/post/time-manage/</loc>
@@ -333,12 +345,6 @@
     <lastmod>2023-03-28T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://fm-chen.tw/tags/%E4%BA%BA%E5%9B%A0%E5%8D%B1%E5%AE%B3/</loc>
-    <lastmod>2023-03-28T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://fm-chen.tw/tags/%E8%87%A8%E5%BB%A0%E6%9C%8D%E5%8B%99/</loc>
-    <lastmod>2023-03-28T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://fm-chen.tw/categories/%E8%87%A8%E5%BB%A0%E6%9C%8D%E5%8B%99/</loc>
     <lastmod>2023-03-28T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://fm-chen.tw/post/oneyear/</loc>
